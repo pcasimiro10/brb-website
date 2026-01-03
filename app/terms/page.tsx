@@ -79,7 +79,7 @@ export default function TermsPage() {
 
           <h3 className="text-xl font-bold mb-3">3.2 Acceptable Use</h3>
           <ul className="list-disc list-inside text-text-muted leading-relaxed mb-6 space-y-2">
-            <li>You agree not to circumvent or attempt to circumvent the App's blocking mechanisms</li>
+            <li>You agree not to circumvent or attempt to circumvent the App&apos;s blocking mechanisms</li>
             <li>You agree not to use the App for any unlawful purpose</li>
             <li>You are responsible for all activity that occurs under your account</li>
             <li>You agree not to reverse engineer or attempt to extract the source code</li>
