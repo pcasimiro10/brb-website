@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Privacy Policy - brb",
@@ -26,7 +27,7 @@ export default function PrivacyPage() {
         <section className="mb-12">
           <h2 className="text-2xl md:text-3xl font-bold mb-6">1. Information Collection</h2>
           <p className="text-text-muted leading-relaxed mb-4">
-            brb requires certain iOS permissions to function properly. Here's what we need and why:
+            brb requires certain iOS permissions to function properly. Here&apos;s what we need and why:
           </p>
           
           <div className="bg-dark-secondary rounded-lg p-6 mb-6">
@@ -40,7 +41,7 @@ export default function PrivacyPage() {
           </div>
 
           <p className="text-text-muted leading-relaxed">
-            These permissions are used solely for the app's core functionality. We cannot access any other health data beyond step counts, and we never transmit this data off your device.
+            These permissions are used solely for the app&apos;s core functionality. We cannot access any other health data beyond step counts, and we never transmit this data off your device.
           </p>
         </section>
 
@@ -140,21 +141,21 @@ export default function PrivacyPage() {
         </section>
 
         <div className="mt-16 pt-8 border-t border-dark-secondary text-center">
-          <a href="/" className="text-text-muted hover:text-text-light transition-colors">
+          <Link href="/" className="text-text-muted hover:text-text-light transition-colors">
             Home
-          </a>
+          </Link>
           <span className="text-text-muted mx-4">|</span>
-          <a href="/privacy" className="text-text-muted hover:text-text-light transition-colors">
+          <Link href="/privacy" className="text-text-muted hover:text-text-light transition-colors">
             Privacy
-          </a>
+          </Link>
           <span className="text-text-muted mx-4">|</span>
-          <a href="/terms" className="text-text-muted hover:text-text-light transition-colors">
+          <Link href="/terms" className="text-text-muted hover:text-text-light transition-colors">
             Terms
-          </a>
+          </Link>
           <span className="text-text-muted mx-4">|</span>
-          <a href="/contact" className="text-text-muted hover:text-text-light transition-colors">
+          <Link href="/contact" className="text-text-muted hover:text-text-light transition-colors">
             Contact
-          </a>
+          </Link>
           <p className="text-text-muted text-sm mt-6">© 2025 brb. All rights reserved.</p>
         </div>
       </div>

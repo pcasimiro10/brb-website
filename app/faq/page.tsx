@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Link from "next/link";
 
 type FAQ = {
   question: string;
@@ -260,7 +261,7 @@ export default function FAQPage() {
         <div className="mt-16 text-center bg-dark-secondary rounded-2xl p-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Still need help?</h2>
           <p className="text-xl text-text-muted mb-8">
-            Can't find what you're looking for? We're here to help.
+            Can&apos;t find what you&apos;re looking for? We&apos;re here to help.
           </p>
           <a
             href="mailto:betterdailyapp@gmail.com"
@@ -272,25 +273,25 @@ export default function FAQPage() {
 
         {/* Footer Navigation */}
         <div className="mt-16 pt-8 border-t border-dark-secondary text-center">
-          <a href="/" className="text-text-muted hover:text-text-light transition-colors">
+          <Link href="/" className="text-text-muted hover:text-text-light transition-colors">
             Home
-          </a>
+          </Link>
           <span className="text-text-muted mx-4">|</span>
-          <a href="/privacy" className="text-text-muted hover:text-text-light transition-colors">
+          <Link href="/privacy" className="text-text-muted hover:text-text-light transition-colors">
             Privacy
-          </a>
+          </Link>
           <span className="text-text-muted mx-4">|</span>
-          <a href="/terms" className="text-text-muted hover:text-text-light transition-colors">
+          <Link href="/terms" className="text-text-muted hover:text-text-light transition-colors">
             Terms
-          </a>
+          </Link>
           <span className="text-text-muted mx-4">|</span>
-          <a href="/contact" className="text-text-muted hover:text-text-light transition-colors">
+          <Link href="/contact" className="text-text-muted hover:text-text-light transition-colors">
             Contact
-          </a>
+          </Link>
           <span className="text-text-muted mx-4">|</span>
-          <a href="/faq" className="text-text-muted hover:text-text-light transition-colors">
+          <Link href="/faq" className="text-text-muted hover:text-text-light transition-colors">
             FAQ
-          </a>
+          </Link>
           <p className="text-text-muted text-sm mt-6">© 2025 brb. All rights reserved.</p>
         </div>
       </div>

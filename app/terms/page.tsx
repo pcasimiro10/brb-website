@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Terms of Service - brb",
@@ -16,7 +17,7 @@ export default function TermsPage() {
         <section className="mb-12">
           <h2 className="text-2xl md:text-3xl font-bold mb-4">1. Introduction</h2>
           <p className="text-text-muted leading-relaxed">
-            Welcome to brb ("the App"). By downloading or using the App, you agree to be bound by these Terms of Service.
+            Welcome to brb (&quot;the App&quot;). By downloading or using the App, you agree to be bound by these Terms of Service.
           </p>
         </section>
 
@@ -99,7 +100,7 @@ export default function TermsPage() {
         <section className="mb-12">
           <h2 className="text-2xl md:text-3xl font-bold mb-4">5. Limitation of Liability</h2>
           <p className="text-text-muted leading-relaxed mb-4">
-            The App is provided "as is" without warranties. We are not responsible for:
+            The App is provided &quot;as is&quot; without warranties. We are not responsible for:
           </p>
           <ul className="list-disc list-inside text-text-muted leading-relaxed space-y-2">
             <li>Inability to access blocked apps</li>
@@ -128,17 +129,17 @@ export default function TermsPage() {
         </section>
 
         <div className="mt-16 pt-8 border-t border-dark-secondary text-center">
-          <a href="/" className="text-text-muted hover:text-text-light transition-colors">
+          <Link href="/" className="text-text-muted hover:text-text-light transition-colors">
             Home
-          </a>
+          </Link>
           <span className="text-text-muted mx-4">|</span>
-          <a href="/privacy" className="text-text-muted hover:text-text-light transition-colors">
+          <Link href="/privacy" className="text-text-muted hover:text-text-light transition-colors">
             Privacy
-          </a>
+          </Link>
           <span className="text-text-muted mx-4">|</span>
-          <a href="/terms" className="text-text-muted hover:text-text-light transition-colors">
+          <Link href="/terms" className="text-text-muted hover:text-text-light transition-colors">
             Terms
-          </a>
+          </Link>
           <span className="text-text-muted mx-4">|</span>
           <a href="mailto:betterdailyapp@gmail.com" className="text-text-muted hover:text-text-light transition-colors">
             Contact
