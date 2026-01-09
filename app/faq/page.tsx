@@ -261,7 +261,7 @@ export default function FAQPage() {
         <div className="mt-16 text-center bg-dark-secondary rounded-2xl p-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">Still need help?</h2>
           <p className="text-xl text-text-muted mb-8">
-            Can&apos;t find what you&apos;re looking for? We&apos;re here to help.
+            Can't find what you're looking for? We're here to help.
           </p>
           <a
             href="mailto:betterdailyapp@gmail.com"

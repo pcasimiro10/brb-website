@@ -48,7 +48,7 @@ export default function ContactPage() {
         <h1 className="text-4xl md:text-5xl font-bold mb-6">Contact us</h1>
         
         <p className="text-text-muted text-lg mb-12">
-          Have a question or feedback about brb? We&apos;d love to hear from you.
+          Have a question or feedback about brb? We'd love to hear from you.
         </p>
 
         {status === "success" && (

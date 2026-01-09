@@ -11,12 +11,12 @@ const features = [
   {
     emoji: "🔒",
     title: "Smart App Blocking",
-    description: "Uses Apple&apos;s Screen Time API for reliable blocking. Choose exactly which apps to block. System-level restrictions that actually work.",
+    description: "Uses Apple's Screen Time API for reliable blocking. Choose exactly which apps to block. System-level restrictions that actually work.",
   },
   {
     emoji: "🎯",
     title: "Honest Goal Setting",
-    description: "Raise your step goal anytime. Lowering only takes effect the next day. No shortcuts — today&apos;s goal is today&apos;s goal.",
+    description: "Raise your step goal anytime. Lowering only takes effect the next day. No shortcuts — today's goal is today's goal.",
   },
   {
     emoji: "🚨",
@@ -26,7 +26,7 @@ const features = [
   {
     emoji: "💪",
     title: "Strict Mode",
-    description: "For when you&apos;re ready to commit fully. No way out except hitting your step goal. Maximum accountability.",
+    description: "For when you're ready to commit fully. No way out except hitting your step goal. Maximum accountability.",
   },
   {
     emoji: "📊",
@@ -47,7 +47,7 @@ export default function Features() {
           className="text-center mb-20"
         >
           <h2 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4">
-            Key Features
+            How It Works
           </h2>
           <p className="text-xl text-text-muted max-w-2xl mx-auto">
             Everything you need to build a healthier relationship with your phone

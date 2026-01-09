@@ -14,7 +14,7 @@ export default function Differentiation() {
           className="text-center"
         >
           <h2 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-12">
-            The App That Turns Scrolling Into Steps
+            Turn Scrolling Into Steps
           </h2>
 
           <div className="space-y-8 text-left md:text-center">
@@ -27,7 +27,7 @@ export default function Differentiation() {
             </p>
 
             <p className="text-xl md:text-2xl text-text-muted leading-relaxed">
-              Every minute you&apos;re blocked is a minute you could be moving.
+              Every minute you're blocked is a minute you could be moving.
             </p>
 
             <div className="bg-dark-secondary/50 backdrop-blur-sm rounded-2xl p-8 border border-primary-green/20">

@@ -20,14 +20,14 @@ export default function PrivacyPage() {
             At brb, we take your privacy seriously. This Privacy Policy explains how we handle your information when you use our iOS application.
           </p>
           <p className="text-text-muted leading-relaxed">
-            The fundamental principle of brb is that your data stays on your device. We don&apos;t collect, store, or transmit your personal information to any servers.
+            The fundamental principle of brb is that your data stays on your device. We don't collect, store, or transmit your personal information to any servers.
           </p>
         </section>
 
         <section className="mb-12">
           <h2 className="text-2xl md:text-3xl font-bold mb-6">1. Information Collection</h2>
           <p className="text-text-muted leading-relaxed mb-4">
-            brb requires certain iOS permissions to function properly. Here&apos;s what we need and why:
+            brb requires certain iOS permissions to function properly. Here's what we need and why:
           </p>
           
           <div className="bg-dark-secondary rounded-lg p-6 mb-6">
@@ -41,7 +41,7 @@ export default function PrivacyPage() {
           </div>
 
           <p className="text-text-muted leading-relaxed">
-            These permissions are used solely for the app&apos;s core functionality. We cannot access any other health data beyond step counts, and we never transmit this data off your device.
+            These permissions are used solely for the app's core functionality. We cannot access any other health data beyond step counts, and we never transmit this data off your device.
           </p>
         </section>
 
@@ -52,7 +52,7 @@ export default function PrivacyPage() {
           </p>
           <ul className="list-disc list-inside text-text-muted leading-relaxed mb-6 space-y-2">
             <li>Step count is read from Apple HealthKit and Motion & Fitness sensors</li>
-            <li>Used only to determine if you&apos;ve reached your goal and should unlock apps</li>
+            <li>Used only to determine if you've reached your goal and should unlock apps</li>
             <li>Stored locally on your device</li>
             <li>Not shared with third parties</li>
             <li>Not transmitted to our servers</li>
@@ -119,7 +119,7 @@ export default function PrivacyPage() {
           <ul className="list-disc list-inside text-text-muted leading-relaxed space-y-2">
             <li>Uninstall the app (removes all app data)</li>
             <li>Reset your device</li>
-            <li>Manually delete data through the app&apos;s settings</li>
+            <li>Manually delete data through the app's settings</li>
           </ul>
         </section>
 

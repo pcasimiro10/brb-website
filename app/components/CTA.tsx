@@ -14,7 +14,7 @@ export default function CTA() {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-            Your Next Scroll Starts With Your Next Step
+            Earn Your Apps Back
           </h2>
           <p className="text-xl md:text-2xl text-text-muted mb-8">
             Join thousands of people who are walking more and scrolling less.
@@ -29,7 +29,7 @@ export default function CTA() {
             className="bg-dark-secondary/50 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-primary-green/20 mb-12 max-w-2xl mx-auto"
           >
             <p className="text-lg md:text-xl text-text-light italic mb-4">
-              &quot;I&apos;ve walked more in the last 2 weeks than I did all last month. This app actually works.&quot;
+              "I've walked more in the last 2 weeks than I did all last month. This app actually works."
             </p>
             <p className="text-sm text-text-muted">— Sarah M.</p>
           </motion.div>

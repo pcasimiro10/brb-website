@@ -22,10 +22,10 @@ export default function TargetAudience() {
           className="text-center"
         >
           <h2 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6">
-            You&apos;ll Love brb If You...
+            You'll Love brb If You...
           </h2>
           <p className="text-xl text-text-muted mb-12 max-w-2xl mx-auto">
-            Sound familiar? You&apos;re exactly who we built this for.
+            Sound familiar? You're exactly who we built this for.
           </p>
 
           <div className="space-y-4">
