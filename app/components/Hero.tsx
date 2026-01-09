@@ -48,7 +48,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="text-lg md:text-xl text-text-muted mb-12 max-w-2xl mx-auto italic"
         >
-          The name says it all: your apps will be right back — after you walk.
+          {`The name says it all: your apps will Be Right Back — after you walk.`}
         </motion.p>
 
         {/* CTA Above Phone */}
