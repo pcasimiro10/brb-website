@@ -32,7 +32,7 @@ export default function HowItWorks() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">How It Works</h2>
+          <h2 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-4">How It Works</h2>
           <p className="text-xl text-text-muted">
             Minimal setup. Maximum motivation to move.
           </p>

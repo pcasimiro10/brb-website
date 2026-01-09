@@ -14,11 +14,6 @@ const features = [
     description: "Uses Apple&apos;s Screen Time API for reliable blocking. Choose exactly which apps to block. System-level restrictions that actually work.",
   },
   {
-    emoji: "✨",
-    title: "Automatic Unlock",
-    description: "Apps unlock the moment you hit your goal. No buttons to press, no manual intervention. Just walk and your apps come back.",
-  },
-  {
     emoji: "🎯",
     title: "Honest Goal Setting",
     description: "Raise your step goal anytime. Lowering only takes effect the next day. No shortcuts — today&apos;s goal is today&apos;s goal.",
@@ -51,7 +46,7 @@ export default function Features() {
           transition={{ duration: 0.6 }}
           className="text-center mb-20"
         >
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
+          <h2 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-4">
             Key Features
           </h2>
           <p className="text-xl text-text-muted max-w-2xl mx-auto">
@@ -67,7 +62,7 @@ export default function Features() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="bg-dark-secondary rounded-2xl p-8 text-center"
+              className="bg-dark-secondary rounded-2xl p-8 text-center hover:bg-dark-secondary/80 hover:scale-105 transition-all duration-300 hover:shadow-lg hover:shadow-primary-green/10"
             >
               <div className="text-6xl md:text-7xl mb-6">{feature.emoji}</div>
               <h3 className="text-xl md:text-2xl font-bold mb-4">{feature.title}</h3>

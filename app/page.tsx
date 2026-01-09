@@ -7,6 +7,7 @@ import DeviceCompatibility from "./components/DeviceCompatibility";
 import TargetAudience from "./components/TargetAudience";
 import CTA from "./components/CTA";
 import Footer from "./components/Footer";
+import BackToTop from "./components/BackToTop";
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
       <TargetAudience />
       <CTA />
       <Footer />
+      <BackToTop />
     </main>
   );
 }

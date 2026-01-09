@@ -1,21 +1,59 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useInView } from "framer-motion";
+import { useRef, useEffect, useState } from "react";
 
 const results = [
   {
-    stat: "40%",
+    stat: "40",
+    suffix: "%",
     label: "More walking on average",
   },
   {
-    stat: "2+ hours",
+    stat: "2",
+    suffix: "+ hours",
     label: "Less scrolling daily",
   },
   {
     stat: "Sustainable",
+    suffix: "",
     label: "Habits that stick",
   },
 ];
+
+function CountUpNumber({ value, suffix }: { value: string; suffix: string }) {
+  const [count, setCount] = useState(0);
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true });
+  const numericValue = parseInt(value);
+
+  useEffect(() => {
+    if (isInView && !isNaN(numericValue)) {
+      let start = 0;
+      const duration = 2000;
+      const increment = numericValue / (duration / 16);
+
+      const timer = setInterval(() => {
+        start += increment;
+        if (start >= numericValue) {
+          setCount(numericValue);
+          clearInterval(timer);
+        } else {
+          setCount(Math.floor(start));
+        }
+      }, 16);
+
+      return () => clearInterval(timer);
+    }
+  }, [isInView, numericValue]);
+
+  return (
+    <div ref={ref} className="text-5xl md:text-6xl font-bold text-primary-green">
+      {isNaN(numericValue) ? value : count}
+      {suffix}
+    </div>
+  );
+}
 
 export default function SocialProof() {
   return (
@@ -28,7 +66,7 @@ export default function SocialProof() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+          <h2 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-6">
             Real Results
           </h2>
           <p className="text-xl text-text-muted max-w-2xl mx-auto">
@@ -46,10 +84,8 @@ export default function SocialProof() {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               className="text-center"
             >
-              <div className="text-5xl md:text-6xl font-bold text-primary-green mb-3">
-                {result.stat}
-              </div>
-              <p className="text-lg md:text-xl text-text-muted">{result.label}</p>
+              <CountUpNumber value={result.stat} suffix={result.suffix} />
+              <p className="text-lg md:text-xl text-text-muted mt-3">{result.label}</p>
             </motion.div>
           ))}
         </div>

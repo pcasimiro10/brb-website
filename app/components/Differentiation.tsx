@@ -13,7 +13,7 @@ export default function Differentiation() {
           transition={{ duration: 0.6 }}
           className="text-center"
         >
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-12">
+          <h2 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-12">
             Why brb is Different
           </h2>
 
