@@ -46,12 +46,6 @@ export default function CTA() {
             </a>
             <p className="text-sm text-text-muted">Start your free 7-day trial</p>
           </div>
-          
-          <div className="mt-12 pt-8 border-t border-dark-secondary/50">
-            <p className="text-sm text-text-muted">
-              Privacy First: Your health data stays entirely on your device
-            </p>
-          </div>
         </motion.div>
       </div>
     </section>
