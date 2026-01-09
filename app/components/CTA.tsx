@@ -19,7 +19,7 @@ export default function CTA() {
           <p className="text-xl md:text-2xl text-text-muted mb-12">
             Download brb and start moving today.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div className="flex flex-col items-center gap-3">
             <a href="#">
               <Image
                 src="/app-store-badge.png"
@@ -29,6 +29,13 @@ export default function CTA() {
                 className="hover:opacity-80 transition-opacity"
               />
             </a>
+            <p className="text-sm text-text-muted">Start your free 7-day trial</p>
+          </div>
+          
+          <div className="mt-12 pt-8 border-t border-dark-secondary/50">
+            <p className="text-sm text-text-muted">
+              Privacy First: Your health data stays entirely on your device
+            </p>
           </div>
         </motion.div>
       </div>

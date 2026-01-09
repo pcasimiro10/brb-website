@@ -37,9 +37,18 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
-          className="text-xl md:text-2xl text-text-muted mb-12 max-w-2xl mx-auto"
+          className="text-xl md:text-2xl text-text-muted mb-4 max-w-2xl mx-auto"
         >
           brb blocks your distracting apps until you hit your daily step goal.
+        </motion.p>
+
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.35 }}
+          className="text-lg md:text-xl text-text-muted/80 mb-12 max-w-2xl mx-auto italic"
+        >
+          The name says it all: your apps will Be Right Back — after you walk.
         </motion.p>
 
         {/* CTA Above Phone */}
@@ -47,7 +56,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"
+          className="flex flex-col items-center gap-3 mb-12"
         >
           <a href="#">
             <Image
@@ -58,6 +67,7 @@ export default function Hero() {
               className="hover:opacity-80 transition-opacity"
             />
           </a>
+          <p className="text-sm text-text-muted">Start your free 7-day trial</p>
         </motion.div>
 
         {/* Phone Mockup - The Star */}

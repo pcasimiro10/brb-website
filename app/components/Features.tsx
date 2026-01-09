@@ -4,19 +4,39 @@ import { motion } from "framer-motion";
 
 const features = [
   {
-    emoji: "🔒",
-    title: "Block apps",
-    description: "Lock Instagram, TikTok, or any app that steals your time",
+    emoji: "📍",
+    title: "Accurate Step Tracking",
+    description: "Syncs with Apple Health for accurate data. Works with any wearable that connects to Health. Built-in iPhone pedometer for watch-free tracking.",
   },
   {
-    emoji: "🚶",
-    title: "Walk to unlock",
-    description: "Hit your step goal to get your apps back",
+    emoji: "🔒",
+    title: "Smart App Blocking",
+    description: "Uses Apple&apos;s Screen Time API for reliable blocking. Choose exactly which apps to block. System-level restrictions that actually work.",
+  },
+  {
+    emoji: "✨",
+    title: "Automatic Unlock",
+    description: "Apps unlock the moment you hit your goal. No buttons to press, no manual intervention. Just walk and your apps come back.",
+  },
+  {
+    emoji: "🎯",
+    title: "Honest Goal Setting",
+    description: "Raise your step goal anytime. Lowering only takes effect the next day. No shortcuts — today&apos;s goal is today&apos;s goal.",
+  },
+  {
+    emoji: "🚨",
+    title: "Emergency Unlock",
+    description: "One free 5-minute unlock per day for genuine emergencies. Life happens — we get it. Resets at midnight so you always have a safety net.",
+  },
+  {
+    emoji: "💪",
+    title: "Strict Mode",
+    description: "For when you&apos;re ready to commit fully. No way out except hitting your step goal. Maximum accountability.",
   },
   {
     emoji: "📊",
-    title: "Track progress",
-    description: "Build streaks and watch your daily steps climb",
+    title: "Progress Tracking",
+    description: "Beautiful circular progress ring. Track your streaks and watch your consistency grow. See your daily wins add up.",
   },
 ];
 
@@ -31,12 +51,15 @@ export default function Features() {
           transition={{ duration: 0.6 }}
           className="text-center mb-20"
         >
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold">
-            How it works
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
+            Key Features
           </h2>
+          <p className="text-xl text-text-muted max-w-2xl mx-auto">
+            Everything you need to build a healthier relationship with your phone
+          </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
           {features.map((feature, index) => (
             <motion.div
               key={index}
