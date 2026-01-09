@@ -63,7 +63,7 @@ export default function HowItWorks() {
           transition={{ duration: 0.6, delay: 0.5 }}
           className="text-center text-xl text-text-muted mt-12"
         >
-          That's it.
+          {`That's it.`}
         </motion.p>
       </div>
     </section>

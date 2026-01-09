@@ -27,7 +27,7 @@ export default function Differentiation() {
             </p>
 
             <p className="text-xl md:text-2xl text-text-muted leading-relaxed">
-              Every minute you're blocked is a minute you could be moving.
+              {`Every minute you're blocked is a minute you could be moving.`}
             </p>
 
             <div className="bg-dark-secondary/50 backdrop-blur-sm rounded-2xl p-8 border border-primary-green/20">

@@ -78,7 +78,7 @@ export default function DeviceCompatibility() {
               Your iPhone tracks steps automatically using its built-in motion sensors. Just keep your phone in your pocket and walk.
             </p>
             <p className="text-base text-text-muted/80 italic">
-              Over 60% of brb users don't own a smartwatch.
+              {`Over 60% of brb users don't own a smartwatch.`}
             </p>
           </motion.div>
         </motion.div>

@@ -29,7 +29,7 @@ export default function CTA() {
             className="bg-dark-secondary/50 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-primary-green/20 mb-12 max-w-2xl mx-auto"
           >
             <p className="text-lg md:text-xl text-text-light italic mb-4">
-              "I've walked more in the last 2 weeks than I did all last month. This app actually works."
+              {`"I've walked more in the last 2 weeks than I did all last month. This app actually works."`}
             </p>
             <p className="text-sm text-text-muted">— Sarah M.</p>
           </motion.div>
