@@ -39,16 +39,16 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.3 }}
           className="text-xl md:text-2xl text-text-light mb-4 max-w-2xl mx-auto"
         >
-          The name says it all: your apps will Be Right Back — after you walk.
+          brb blocks Instagram, TikTok, and any app you choose until you hit your daily step goal.
         </motion.p>
 
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
-          className="text-lg md:text-xl text-text-muted mb-12 max-w-2xl mx-auto"
+          className="text-lg md:text-xl text-text-muted mb-12 max-w-2xl mx-auto italic"
         >
-          brb blocks Instagram, TikTok, and any app you choose until you hit your daily step goal.
+          The name says it all: your apps will be right back — after you walk.
         </motion.p>
 
         {/* CTA Above Phone */}
