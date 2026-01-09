@@ -21,7 +21,7 @@ export default function TargetAudience() {
           transition={{ duration: 0.6 }}
           className="text-center"
         >
-          <h2 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-6">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6">
             You&apos;ll Love brb If You...
           </h2>
           <p className="text-xl text-text-muted mb-12 max-w-2xl mx-auto">

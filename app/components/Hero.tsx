@@ -23,22 +23,12 @@ export default function Hero() {
       </motion.div>
 
       <div className="max-w-4xl mx-auto text-center">
-        {/* Brand Name Explanation */}
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-lg md:text-xl text-primary-green font-semibold mb-4 tracking-wide"
-        >
-          brb = Be Right Back
-        </motion.p>
-
         {/* Headline */}
         <motion.h1
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
-          className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6"
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6"
         >
           Move first. Scroll later.
         </motion.h1>
@@ -46,16 +36,16 @@ export default function Hero() {
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          transition={{ duration: 0.8, delay: 0.3 }}
           className="text-xl md:text-2xl text-text-light mb-4 max-w-2xl mx-auto"
         >
-          Your apps will be right back — after you walk.
+          The name says it all: your apps will Be Right Back — after you walk.
         </motion.p>
 
         <motion.p
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.5 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
           className="text-lg md:text-xl text-text-muted mb-12 max-w-2xl mx-auto"
         >
           brb blocks Instagram, TikTok, and any app you choose until you hit your daily step goal.
@@ -65,7 +55,7 @@ export default function Hero() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
+          transition={{ duration: 0.8, delay: 0.5 }}
           className="flex flex-col items-center gap-3 mb-12"
         >
           <a href="#">
@@ -84,7 +74,7 @@ export default function Hero() {
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.7 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
           className="relative flex justify-center items-center"
         >
           <div className="relative w-full max-w-sm mx-auto">

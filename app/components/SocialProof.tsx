@@ -66,7 +66,7 @@ export default function SocialProof() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-6">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6">
             Real Results
           </h2>
           <p className="text-xl text-text-muted max-w-2xl mx-auto">
