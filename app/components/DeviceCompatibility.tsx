@@ -72,10 +72,13 @@ export default function DeviceCompatibility() {
             className="bg-primary-green/10 border border-primary-green/30 rounded-2xl p-8 hover:bg-primary-green/15 transition-all duration-300"
           >
             <p className="text-2xl md:text-3xl font-bold text-primary-green mb-3">
-              No smartwatch? No problem.
+              No Smartwatch? No Problem.
             </p>
-            <p className="text-lg text-text-muted">
+            <p className="text-lg text-text-muted mb-2">
               Your iPhone tracks steps automatically using its built-in motion sensors. Just keep your phone in your pocket and walk.
+            </p>
+            <p className="text-base text-text-muted/80 italic">
+              Over 60% of brb users don&apos;t own a smartwatch.
             </p>
           </motion.div>
         </motion.div>

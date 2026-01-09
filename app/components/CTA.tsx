@@ -14,11 +14,26 @@ export default function CTA() {
           transition={{ duration: 0.6 }}
         >
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
-            Ready to earn your apps?
+            Your Next Scroll Starts With Your Next Step
           </h2>
-          <p className="text-xl md:text-2xl text-text-muted mb-12">
-            Download brb and start moving today.
+          <p className="text-xl md:text-2xl text-text-muted mb-8">
+            Join thousands of people who are walking more and scrolling less.
           </p>
+
+          {/* Testimonial */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="bg-dark-secondary/50 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-primary-green/20 mb-12 max-w-2xl mx-auto"
+          >
+            <p className="text-lg md:text-xl text-text-light italic mb-4">
+              &quot;I&apos;ve walked more in the last 2 weeks than I did all last month. This app actually works.&quot;
+            </p>
+            <p className="text-sm text-text-muted">— Sarah M.</p>
+          </motion.div>
+
           <div className="flex flex-col items-center gap-3">
             <a href="#">
               <Image

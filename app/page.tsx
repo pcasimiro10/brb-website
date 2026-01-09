@@ -1,7 +1,6 @@
 import Hero from "./components/Hero";
 import SocialProof from "./components/SocialProof";
 import Differentiation from "./components/Differentiation";
-import HowItWorks from "./components/HowItWorks";
 import Features from "./components/Features";
 import DeviceCompatibility from "./components/DeviceCompatibility";
 import TargetAudience from "./components/TargetAudience";
@@ -15,7 +14,6 @@ export default function Home() {
       <Hero />
       <SocialProof />
       <Differentiation />
-      <HowItWorks />
       <Features />
       <DeviceCompatibility />
       <TargetAudience />

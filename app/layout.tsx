@@ -5,10 +5,10 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "brb - Move First, Scroll Later",
+  title: "brb: Walk to Unlock Apps | Move First, Scroll Later",
   description: "brb blocks your distracting apps until you hit your daily step goal. Turn your biggest distraction into your biggest motivation. Available on iOS.",
   openGraph: {
-    title: "brb - Move First, Scroll Later",
+    title: "brb: Walk to Unlock Apps | Move First, Scroll Later",
     description: "brb blocks your distracting apps until you hit your daily step goal. Turn your biggest distraction into your biggest motivation. Available on iOS.",
     type: "website",
   },
