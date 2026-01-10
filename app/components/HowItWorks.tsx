@@ -13,7 +13,7 @@ const steps = [
   },
   {
     number: "3",
-    title: "Walk",
+    title: "Move",
   },
   {
     number: "4",

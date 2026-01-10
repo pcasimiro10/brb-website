@@ -11,7 +11,7 @@ const features = [
   {
     emoji: "🔒",
     title: "Smart App Blocking",
-    description: "See your biggest distractions ranked by screen time. Safari, Instagram, TikTok — all laid out. Then block exactly what's stealing your time.",
+    description: "See your biggest distractions ranked by screen time. TikTok, Reddit, YouTube — all laid out. Then block exactly what's stealing your time.",
   },
   {
     emoji: "🎯",
@@ -62,10 +62,10 @@ export default function Features() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="bg-dark-secondary rounded-2xl p-8 text-center hover:bg-dark-secondary/80 hover:scale-105 transition-all duration-300 hover:shadow-lg hover:shadow-primary-green/10"
+              className="group bg-dark-secondary rounded-2xl p-8 text-center border border-primary-green/0 hover:border-primary-green/50 hover:translate-y-[-8px] hover:shadow-2xl hover:shadow-primary-green/30 hover:bg-gradient-to-br hover:from-dark-secondary hover:to-primary-green/5 transition-all duration-300 ease-out"
             >
-              <div className="text-6xl md:text-7xl mb-6">{feature.emoji}</div>
-              <h3 className="text-xl md:text-2xl font-bold mb-4">{feature.title}</h3>
+              <div className="text-6xl md:text-7xl mb-6 group-hover:scale-110 group-hover:translate-y-[-4px] transition-transform duration-200 delay-75">{feature.emoji}</div>
+              <h3 className="text-xl md:text-2xl font-bold mb-4 group-hover:text-primary-green transition-colors duration-300">{feature.title}</h3>
               <p className="text-base md:text-lg text-text-muted leading-relaxed">{feature.description}</p>
             </motion.div>
           ))}

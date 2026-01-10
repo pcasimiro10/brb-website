@@ -2,22 +2,16 @@
 
 import { motion } from "framer-motion";
 
-const deviceCategories = [
-  {
-    icon: "⌚",
-    title: "Smartwatches",
-    devices: ["Apple Watch", "Fitbit", "Garmin", "COROS"],
-  },
-  {
-    icon: "💪",
-    title: "Smart Wearables",
-    devices: ["Oura Ring", "Whoop", "Amazfit"],
-  },
-  {
-    icon: "📱",
-    title: "Built-In Sensors",
-    devices: ["No watch needed", "Automatic iPhone tracking"],
-  },
+const devices = [
+  { icon: "⌚", name: "Apple Watch" },
+  { icon: "💍", name: "Oura Ring" },
+  { icon: "🏃", name: "Garmin" },
+  { icon: "📱", name: "Fitbit" },
+  { icon: "💪", name: "Whoop" },
+  { icon: "⚡", name: "COROS" },
+  { icon: "🔄", name: "Amazfit" },
+  { icon: "📊", name: "Polar" },
+  { icon: "✨", name: "+ more" },
 ];
 
 export default function DeviceCompatibility() {
@@ -35,30 +29,31 @@ export default function DeviceCompatibility() {
             Compatible with All Your Wearables
           </h2>
           <p className="text-xl text-text-muted mb-12 max-w-3xl mx-auto">
-            brb syncs with Apple Health, which means it works with virtually any step-tracking device
+            brb syncs with Apple Health for accurate step tracking
           </p>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-            {deviceCategories.map((category, index) => (
+          {/* Icon Grid */}
+          <div className="grid grid-cols-3 md:grid-cols-3 lg:grid-cols-9 gap-6 mb-12 max-w-4xl mx-auto">
+            {devices.map((device, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="bg-gradient-to-br from-dark-secondary to-dark-secondary/50 rounded-2xl p-8 text-center border border-primary-green/10 hover:border-primary-green/30 hover:scale-105 transition-all duration-300 hover:shadow-lg hover:shadow-primary-green/10"
+                transition={{ duration: 0.4, delay: index * 0.05 }}
+                className="flex flex-col items-center gap-2 group"
               >
-                <div className="text-6xl mb-4">{category.icon}</div>
-                <h3 className="text-xl font-bold mb-3">{category.title}</h3>
-                <div className="text-sm text-text-muted space-y-1">
-                  {category.devices.map((device, idx) => (
-                    <p key={idx}>{device}</p>
-                  ))}
+                <div className="text-4xl md:text-5xl group-hover:scale-110 transition-transform duration-200">
+                  {device.icon}
                 </div>
+                <p className="text-xs md:text-sm text-text-muted group-hover:text-text-light transition-colors duration-200">
+                  {device.name}
+                </p>
               </motion.div>
             ))}
           </div>
 
+          {/* iPhone Callout */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
