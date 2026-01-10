@@ -37,7 +37,7 @@ export default function Differentiation() {
             </div>
 
             <p className="text-xl md:text-2xl text-text-light leading-relaxed font-bold">
-              One rule. Real results.
+              One rule: No steps, no scrolling.
             </p>
           </div>
         </motion.div>
