@@ -11,7 +11,7 @@ const features = [
   {
     emoji: "🔒",
     title: "Smart App Blocking",
-    description: "See your biggest distractions ranked by screen time. TikTok, Reddit, YouTube — all laid out. Then block exactly what's stealing your time.",
+    description: "brb ranks your top distractions (TikTok, Reddit, YouTube, etc.) by screen time. One tap to block them.",
   },
   {
     emoji: "🎯",
@@ -26,12 +26,12 @@ const features = [
   {
     emoji: "💪",
     title: "Strict Mode",
-    description: "For when you're ready to commit fully. No way to unlock apps except hitting your step goal. Maximum accountability.",
+    description: "The ultimate commitment. Apps stay locked until you hit your goal. No exceptions, no shortcuts.",
   },
   {
     emoji: "🔥",
     title: "Progress Tracking",
-    description: "Track your streaks and compete with yourself. Beat your personal best. Watch your daily wins add up into unstoppable momentum.",
+    description: "Track your streaks and compete with yourself. Every day is a chance to beat your best.",
   },
 ];
 
