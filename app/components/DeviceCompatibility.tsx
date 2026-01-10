@@ -6,11 +6,11 @@ const devices = [
   { icon: "⌚", name: "Apple Watch" },
   { icon: "💍", name: "Oura Ring" },
   { icon: "🏃", name: "Garmin" },
-  { icon: "📱", name: "Fitbit" },
-  { icon: "💪", name: "Whoop" },
-  { icon: "⚡", name: "COROS" },
-  { icon: "🔄", name: "Amazfit" },
-  { icon: "📊", name: "Polar" },
+  { icon: "🎯", name: "Fitbit" },
+  { icon: "🔋", name: "Whoop" },
+  { icon: "🏔️", name: "COROS" },
+  { icon: "💫", name: "Amazfit" },
+  { icon: "🧊", name: "Polar" },
   { icon: "✨", name: "+ more" },
 ];
 
