@@ -2,16 +2,19 @@
 
 import { motion } from "framer-motion";
 
-const devices = [
-  "Apple Watch",
-  "Oura Ring",
-  "Garmin",
-  "Fitbit",
-  "Whoop",
-  "COROS",
-  "Amazfit",
-  "Polar",
-  "& more",
+const deviceCategories = [
+  {
+    title: "Smartwatches",
+    devices: ["Apple Watch", "Garmin", "Fitbit", "COROS", "Amazfit", "Polar"],
+  },
+  {
+    title: "Smart Rings",
+    devices: ["Oura Ring", "Circular", "Ultrahuman"],
+  },
+  {
+    title: "Fitness Bands",
+    devices: ["Whoop", "Mi Band", "& more"],
+  },
 ];
 
 export default function DeviceCompatibility() {
@@ -32,18 +35,27 @@ export default function DeviceCompatibility() {
             brb syncs with Apple Health for accurate step tracking
           </p>
 
-          {/* Badge Grid */}
-          <div className="flex flex-wrap justify-center gap-3 mb-12 max-w-4xl mx-auto">
-            {devices.map((device, index) => (
+          {/* Category Cards */}
+          <div className="grid md:grid-cols-3 gap-6 mb-12 max-w-4xl mx-auto">
+            {deviceCategories.map((category, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.3, delay: index * 0.05 }}
-                className="border border-primary-green/20 rounded-full px-5 py-2.5 text-sm md:text-base text-text-light hover:border-primary-green/50 hover:bg-primary-green/5 transition-all duration-200 cursor-default"
+                transition={{ duration: 0.4, delay: index * 0.1 }}
+                className="bg-dark-secondary/50 backdrop-blur-sm rounded-2xl p-6 border border-primary-green/10 hover:border-primary-green/30 hover:bg-dark-secondary/80 transition-all duration-300"
               >
-                {device}
+                <h3 className="text-xl font-bold text-text-light mb-4">
+                  {category.title}
+                </h3>
+                <ul className="space-y-2">
+                  {category.devices.map((device, idx) => (
+                    <li key={idx} className="text-sm text-text-muted">
+                      {device}
+                    </li>
+                  ))}
+                </ul>
               </motion.div>
             ))}
           </div>
