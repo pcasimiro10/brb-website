@@ -14,7 +14,7 @@ export default function Differentiation() {
           className="text-center"
         >
           <h2 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-12">
-            Turn Scrolling Into Steps
+            One Rule: No Steps, No Scrolling
           </h2>
 
           <div className="space-y-8 text-left md:text-center">
@@ -23,7 +23,7 @@ export default function Differentiation() {
             </p>
 
             <p className="text-xl md:text-2xl text-text-light leading-relaxed font-medium">
-              brb gives you something to do: walk.
+              brb gives you something to do: move.
             </p>
 
             <p className="text-xl md:text-2xl text-text-muted leading-relaxed">
@@ -35,10 +35,6 @@ export default function Differentiation() {
                 Your apps become your motivation, not your distraction.
               </p>
             </div>
-
-            <p className="text-xl md:text-2xl text-text-light leading-relaxed font-bold">
-              One rule: No steps, no scrolling.
-            </p>
           </div>
         </motion.div>
       </div>

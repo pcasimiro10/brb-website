@@ -29,7 +29,7 @@ export default function DeviceCompatibility() {
           className="text-center"
         >
           <h2 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6">
-            Compatible with All Your Wearables
+            Compatible with All Wearables
           </h2>
           <p className="text-xl text-text-muted mb-12 max-w-3xl mx-auto">
             brb syncs with Apple Health for accurate step tracking

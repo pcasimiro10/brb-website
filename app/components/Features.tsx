@@ -6,7 +6,7 @@ const features = [
   {
     emoji: "📍",
     title: "Accurate Step Tracking",
-    description: "brb syncs with Apple Health for accurate data. Works with any wearable that connects to Health. Built-in iPhone pedometer for watch-free tracking.",
+    description: "brb syncs with Apple Health, any connected wearable, or just your iPhone's built-in sensors.",
   },
   {
     emoji: "🔒",
@@ -16,7 +16,7 @@ const features = [
   {
     emoji: "🎯",
     title: "Honest Goal Setting",
-    description: "Raise your step goal anytime. Lowering your goal goes into effect the following day. No shortcuts — today's goal is today's goal.",
+    description: "Raise your step goal anytime. Lowering your goal goes into effect the following day. No shortcuts - today's goal is today's goal.",
   },
   {
     emoji: "🚨",

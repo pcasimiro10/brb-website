@@ -39,7 +39,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.3 }}
           className="text-xl md:text-2xl text-text-light mb-4 max-w-2xl mx-auto"
         >
-          brb blocks Instagram, TikTok, Slack/Teams, and any app you choose until you hit your daily step goal.
+          brb blocks Instagram, TikTok, Slack/Teams, or any app you choose until you hit your daily step goal.
         </motion.p>
 
         <motion.p
@@ -48,7 +48,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="text-lg md:text-xl text-text-muted mb-12 max-w-2xl mx-auto italic"
         >
-          {`The name says it all: your apps will Be Right Back — after you move.`}
+          {`The name says it all: your apps will Be Right Back - after you move.`}
         </motion.p>
 
         {/* CTA Above Phone */}
