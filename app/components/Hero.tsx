@@ -39,7 +39,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.3 }}
           className="text-xl md:text-2xl text-text-light mb-4 max-w-2xl mx-auto"
         >
-          brb blocks Instagram, TikTok, Slack/Teams, or any app you choose until you hit your daily step goal.
+          brb blocks Instagram, TikTok, or any distracting app until you hit your daily step goal.
         </motion.p>
 
         <motion.p
