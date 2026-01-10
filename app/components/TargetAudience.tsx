@@ -3,11 +3,12 @@
 import { motion } from "framer-motion";
 
 const audiences = [
-  "Check Instagram before you even get out of bed",
-  "Have a Fitbit/Apple Watch but rarely hit your step goal",
+  "Want to prioritize movement and mental health",
+  "Check social media before you even get out of bed",
   "Work from home and realize you've barely moved all day",
-  "Set Screen Time limits but always ignore them",
-  "Want to be more active but can't afford a gym membership",
+  "Set screen time limits, but always ignore them",
+  "Want to build healthier habits that actually stick",
+  "Doom scroll more than you'd like to admit (no judgment)",
 ];
 
 export default function TargetAudience() {
@@ -21,12 +22,9 @@ export default function TargetAudience() {
           transition={{ duration: 0.6 }}
           className="text-center"
         >
-          <h2 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6">
-            {`You'll Love brb If You...`}
+          <h2 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-12">
+            {`brb Is For You If You...`}
           </h2>
-          <p className="text-xl text-text-muted mb-12 max-w-2xl mx-auto">
-            {`Sound familiar? You're exactly who we built this for.`}
-          </p>
 
           <div className="space-y-4">
             {audiences.map((audience, index) => (

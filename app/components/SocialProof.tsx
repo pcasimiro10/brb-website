@@ -69,9 +69,6 @@ export default function SocialProof() {
           <h2 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6">
             Real Results
           </h2>
-          <p className="text-xl text-text-muted max-w-2xl mx-auto">
-            brb users see real changes
-          </p>
         </motion.div>
 
         <div className="grid md:grid-cols-3 gap-8 mb-12">

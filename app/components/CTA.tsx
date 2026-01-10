@@ -17,7 +17,7 @@ export default function CTA() {
             Earn Your Apps Back
           </h2>
           <p className="text-xl md:text-2xl text-text-muted mb-8">
-            Join thousands of people who are walking more and scrolling less.
+            Join thousands of people who are moving more and scrolling less.
           </p>
 
           {/* Testimonial */}
@@ -34,7 +34,7 @@ export default function CTA() {
             <p className="text-sm text-text-muted">— Sarah M.</p>
           </motion.div>
 
-          <div className="flex flex-col items-center gap-3">
+          <div className="flex flex-col items-center">
             <a href="#">
               <Image
                 src="/app-store-badge.png"
@@ -44,7 +44,6 @@ export default function CTA() {
                 className="hover:opacity-80 transition-opacity"
               />
             </a>
-            <p className="text-sm text-text-muted">Start your free 7-day trial</p>
           </div>
         </motion.div>
       </div>

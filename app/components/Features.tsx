@@ -6,32 +6,32 @@ const features = [
   {
     emoji: "📍",
     title: "Accurate Step Tracking",
-    description: "Syncs with Apple Health for accurate data. Works with any wearable that connects to Health. Built-in iPhone pedometer for watch-free tracking.",
+    description: "brb syncs with Apple Health for accurate data. Works with any wearable that connects to Health. Built-in iPhone pedometer for watch-free tracking.",
   },
   {
     emoji: "🔒",
     title: "Smart App Blocking",
-    description: "Uses Apple's Screen Time API for reliable blocking. Choose exactly which apps to block. System-level restrictions that actually work.",
+    description: "See your biggest distractions ranked by screen time. Safari, Instagram, TikTok — all laid out. Then block exactly what's stealing your time.",
   },
   {
     emoji: "🎯",
     title: "Honest Goal Setting",
-    description: "Raise your step goal anytime. Lowering only takes effect the next day. No shortcuts — today's goal is today's goal.",
+    description: "Raise your step goal anytime. Lowering your goal goes into effect the following day. No shortcuts — today's goal is today's goal.",
   },
   {
     emoji: "🚨",
     title: "Emergency Unlock",
-    description: "One free 5-minute unlock per day for genuine emergencies. Life happens — we get it. Resets at midnight so you always have a safety net.",
+    description: "One 5-minute unlock per day for genuine emergencies. Life happens! We get it.",
   },
   {
     emoji: "💪",
     title: "Strict Mode",
-    description: "For when you're ready to commit fully. No way out except hitting your step goal. Maximum accountability.",
+    description: "For when you're ready to commit fully. No way to unlock apps except hitting your step goal. Maximum accountability.",
   },
   {
-    emoji: "📊",
+    emoji: "🔥",
     title: "Progress Tracking",
-    description: "Beautiful circular progress ring. Track your streaks and watch your consistency grow. See your daily wins add up.",
+    description: "Track your streaks and compete with yourself. Beat your personal best. Watch your daily wins add up into unstoppable momentum.",
   },
 ];
 

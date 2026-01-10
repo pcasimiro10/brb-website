@@ -6,22 +6,17 @@ const deviceCategories = [
   {
     icon: "⌚",
     title: "Smartwatches",
-    devices: ["Apple Watch", "Fitbit", "Garmin"],
+    devices: ["Apple Watch", "Fitbit", "Garmin", "COROS"],
   },
   {
     icon: "💪",
     title: "Smart Wearables",
-    devices: ["Oura Ring", "Whoop", "Other fitness trackers"],
+    devices: ["Oura Ring", "Whoop", "Amazfit"],
   },
   {
     icon: "📱",
-    title: "iPhone Built-in",
-    devices: ["No watch needed", "Automatic tracking"],
-  },
-  {
-    icon: "🔗",
-    title: "HealthKit Compatible",
-    devices: ["Any wearable that", "syncs with Apple Health"],
+    title: "Built-In Sensors",
+    devices: ["No watch needed", "Automatic iPhone tracking"],
   },
 ];
 
@@ -37,13 +32,13 @@ export default function DeviceCompatibility() {
           className="text-center"
         >
           <h2 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6">
-            Works with All Your Devices
+            Compatible with All Your Wearables
           </h2>
           <p className="text-xl text-text-muted mb-12 max-w-3xl mx-auto">
             brb syncs with Apple Health, which means it works with virtually any step-tracking device
           </p>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
             {deviceCategories.map((category, index) => (
               <motion.div
                 key={index}
@@ -75,10 +70,10 @@ export default function DeviceCompatibility() {
               No Smartwatch? No Problem.
             </p>
             <p className="text-lg text-text-muted mb-2">
-              Your iPhone tracks steps automatically using its built-in motion sensors. Just keep your phone in your pocket and walk.
+              Your iPhone tracks steps automatically using its built-in motion sensors. Just keep your phone in your pocket and move.
             </p>
             <p className="text-base text-text-muted/80 italic">
-              {`Over 60% of brb users don't own a smartwatch.`}
+              {`56% of brb users don't own a smartwatch.`}
             </p>
           </motion.div>
         </motion.div>
