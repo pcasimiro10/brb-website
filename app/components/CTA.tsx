@@ -31,7 +31,7 @@ export default function CTA() {
             <p className="text-lg md:text-xl text-text-light italic mb-4">
               {`"I've walked more in the last 2 weeks than I did all last month. This app actually works."`}
             </p>
-            <p className="text-sm text-text-muted">— Sarah M.</p>
+            <p className="text-sm text-text-muted">— Christine C.</p>
           </motion.div>
 
           <div className="flex flex-col items-center">

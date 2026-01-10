@@ -3,15 +3,15 @@
 import { motion } from "framer-motion";
 
 const devices = [
-  { icon: "⌚", name: "Apple Watch" },
-  { icon: "💍", name: "Oura Ring" },
-  { icon: "🏃", name: "Garmin" },
-  { icon: "🎯", name: "Fitbit" },
-  { icon: "🔋", name: "Whoop" },
-  { icon: "🏔️", name: "COROS" },
-  { icon: "💫", name: "Amazfit" },
-  { icon: "🧊", name: "Polar" },
-  { icon: "✨", name: "+ more" },
+  "Apple Watch",
+  "Oura Ring",
+  "Garmin",
+  "Fitbit",
+  "Whoop",
+  "COROS",
+  "Amazfit",
+  "Polar",
+  "& more",
 ];
 
 export default function DeviceCompatibility() {
@@ -32,23 +32,18 @@ export default function DeviceCompatibility() {
             brb syncs with Apple Health for accurate step tracking
           </p>
 
-          {/* Icon Grid */}
-          <div className="grid grid-cols-3 md:grid-cols-3 lg:grid-cols-9 gap-6 mb-12 max-w-4xl mx-auto">
+          {/* Badge Grid */}
+          <div className="flex flex-wrap justify-center gap-3 mb-12 max-w-4xl mx-auto">
             {devices.map((device, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, scale: 0.8 }}
+                initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: index * 0.05 }}
-                className="flex flex-col items-center gap-2 group"
+                transition={{ duration: 0.3, delay: index * 0.05 }}
+                className="border border-primary-green/20 rounded-full px-5 py-2.5 text-sm md:text-base text-text-light hover:border-primary-green/50 hover:bg-primary-green/5 transition-all duration-200 cursor-default"
               >
-                <div className="text-4xl md:text-5xl group-hover:scale-110 transition-transform duration-200">
-                  {device.icon}
-                </div>
-                <p className="text-xs md:text-sm text-text-muted group-hover:text-text-light transition-colors duration-200">
-                  {device.name}
-                </p>
+                {device}
               </motion.div>
             ))}
           </div>
