@@ -43,8 +43,8 @@ const faqSections: FAQSection[] = [
     title: "Troubleshooting",
     faqs: [
       {
-        question: "My apps aren't blocking or unlocking properly",
-        answer: `If blocked apps are still accessible or unlocked apps remain blocked, try these steps:
+        question: "My apps aren't locking or unlocking properly",
+        answer: `If locked apps are still accessible or unlocked apps remain locked, try these steps:
 1. Check your blocked apps list - Go to the Block Apps page in brb and make sure the apps you want blocked are actually in your list. You can add or remove apps here.
 2. Verify Screen Time permissions - Go to iOS Settings > Screen Time and make sure brb has the necessary permissions enabled.
 3. Remove conflicting Screen Time limits - If you have manual Screen Time limits or Downtime schedules in iOS Settings, remove them as they can conflict with brb.
@@ -87,8 +87,8 @@ If you believe this is an error, contact us with the date and we'll investigate.
         answer: "No. That's the point! brb uses Apple's Screen Time API, which cannot be bypassed. The only way to unlock your apps is to reach your step goal.",
       },
       {
-        question: "What happens if I need to access a blocked app in an emergency?",
-        answer: "brb includes a 5-minute Emergency Unlock feature on the Block Apps page. Tap \"Emergency Unlock\" to immediately access all blocked apps for 5 minutes. You can use this once per day (resets at midnight). Use it wisely for truly urgent situations - the goal is to build the habit of moving first, not finding ways around it.",
+        question: "What happens if I need to access a locked app in an emergency?",
+        answer: "brb includes a 5-minute Emergency Unlock feature on the Block Apps page. Tap \"Emergency Unlock\" to immediately access all locked apps for 5 minutes. You can use this once per day (resets at midnight). Use it wisely for truly urgent situations - the goal is to build the habit of moving first, not finding ways around it.",
       },
     ],
   },
@@ -98,7 +98,7 @@ If you believe this is an error, contact us with the date and we'll investigate.
     faqs: [
       {
         question: "Is my health data private?",
-        answer: "Yes. All your step data, blocked apps, and progress stay on your device only. brb doesn't send any data to servers or share it with third parties. See our Privacy Policy for full details.",
+        answer: "Yes. All your step data, blocked app list, and progress stay on your device only. brb doesn't send any data to servers or share it with third parties. See our Privacy Policy for full details.",
       },
       {
         question: "Why does brb need HealthKit permission?",
@@ -106,7 +106,7 @@ If you believe this is an error, contact us with the date and we'll investigate.
       },
       {
         question: "Why does brb need Screen Time permission?",
-        answer: "Screen Time permission allows brb to block and unblock apps on your device. This is the same system Apple uses for parental controls - it's secure and cannot be bypassed.",
+        answer: "Screen Time permission allows brb to lock and unlock apps on your device. This is the same system Apple uses for parental controls - it's secure and cannot be bypassed.",
       },
     ],
   },

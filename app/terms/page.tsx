@@ -52,7 +52,7 @@ export default function TermsPage() {
           <h3 className="text-xl font-bold mb-3">2.3 App Blocking Functionality</h3>
           <ul className="list-disc list-inside text-text-muted leading-relaxed mb-6 space-y-2">
             <li>The App uses iOS Family Controls APIs to restrict access to selected applications</li>
-            <li>Blocked apps remain inaccessible until your daily step goal is achieved</li>
+            <li>Locked apps remain inaccessible until your daily step goal is achieved</li>
             <li>You can configure which apps to block and customize your step goal within the App</li>
             <li>Apps unlock automatically when you reach your configured step target</li>
           </ul>
@@ -103,8 +103,8 @@ export default function TermsPage() {
             The App is provided &quot;as is&quot; without warranties. We are not responsible for:
           </p>
           <ul className="list-disc list-inside text-text-muted leading-relaxed space-y-2">
-            <li>Inability to access blocked apps</li>
-            <li>Any consequences of app blocking or unblocking</li>
+            <li>Inability to access locked apps</li>
+            <li>Any consequences of app locking or unlocking</li>
             <li>Step tracking accuracy or HealthKit data discrepancies</li>
             <li>Interruptions in service availability</li>
             <li>Any losses or damages resulting from your use of the App</li>
