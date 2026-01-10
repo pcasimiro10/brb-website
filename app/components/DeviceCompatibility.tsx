@@ -28,12 +28,9 @@ export default function DeviceCompatibility() {
           transition={{ duration: 0.6 }}
           className="text-center"
         >
-          <h2 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6">
+          <h2 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-12">
             Compatible with All Wearables
           </h2>
-          <p className="text-xl text-text-muted mb-12 max-w-3xl mx-auto">
-            brb syncs with Apple Health for accurate step tracking
-          </p>
 
           {/* Category Cards */}
           <div className="grid md:grid-cols-3 gap-6 mb-12 max-w-4xl mx-auto">

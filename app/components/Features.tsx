@@ -11,7 +11,7 @@ const features = [
   {
     emoji: "🔒",
     title: "Smart App Blocking",
-    description: "brb ranks your top distractions (TikTok, Reddit, YouTube, etc.) by screen time. One tap to block them.",
+    description: "See your biggest distractions ranked by screen time, then block them with one tap.",
   },
   {
     emoji: "🎯",
@@ -49,9 +49,6 @@ export default function Features() {
           <h2 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-4">
             How It Works
           </h2>
-          <p className="text-xl text-text-muted max-w-2xl mx-auto">
-            Everything you need to build a healthier relationship with your phone
-          </p>
         </motion.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
