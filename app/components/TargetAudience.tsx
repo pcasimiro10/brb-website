@@ -23,7 +23,7 @@ export default function TargetAudience() {
           className="text-center"
         >
           <h2 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-12">
-            {`brb Is For You If You...`}
+            {`Built For People Who...`}
           </h2>
 
           <div className="space-y-4">
