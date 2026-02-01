@@ -6,42 +6,11 @@ import { motion } from "framer-motion";
 export default function Hero() {
   return (
     <section className="relative min-h-screen flex flex-col px-6 py-20 lg:py-32 overflow-hidden">
-      {/* Logo */}
-      <motion.div
-        initial={{ opacity: 0, y: -20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        className="absolute top-8 left-6 md:left-12 z-10"
-      >
-        <Image
-          src="/logo.png"
-          alt="brb logo"
-          width={80}
-          height={40}
-          className="w-20 md:w-24"
-        />
-      </motion.div>
-
       <div className="max-w-6xl mx-auto w-full pt-20 lg:pt-24">
         {/* Split Layout: Text Left, Phone Right */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-2 items-center">
           {/* Left Content Column */}
           <div className="lg:col-span-7 text-center lg:text-left">
-            {/* Social Proof Bar */}
-            <motion.div
-              initial={{ opacity: 0, y: -10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.4 }}
-              className="flex items-center justify-center lg:justify-start gap-2 text-sm text-text-muted mb-6"
-            >
-              <div className="flex text-yellow-400">
-                {'★★★★★'}
-              </div>
-              <span className="font-medium text-text-light">4.8 rating</span>
-              <span className="text-text-muted">•</span>
-              <span>10,000+ active users</span>
-            </motion.div>
-
             {/* Headline */}
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
