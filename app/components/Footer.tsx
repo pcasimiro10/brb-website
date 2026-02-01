@@ -4,9 +4,9 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <footer className="py-12 px-6 border-t border-dark-secondary">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-4xl mx-auto">
         {/* Two Column Layout */}
-        <div className="grid grid-cols-2 gap-8 mb-8">
+        <div className="flex justify-between gap-16 mb-8">
           {/* Left Column: brb */}
           <div>
             <h3 className="text-text-light font-semibold mb-3">brb</h3>
