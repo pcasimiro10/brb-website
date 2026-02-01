@@ -28,7 +28,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4 }}
-          className="flex items-center justify-center lg:justify-start gap-2 text-sm text-text-muted mb-4 lg:mb-6"
+          className="flex items-center justify-center lg:justify-start gap-2 text-sm text-text-muted mb-3"
         >
           <div className="flex text-yellow-400">
             {'★★★★★'}
@@ -47,7 +47,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold leading-[1.05] lg:leading-[1.1] mb-6"
+              className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold leading-[1.05] lg:leading-[1.1] mb-6"
             >
               Move first.{' '}
               <span className="text-primary-green">Scroll later.</span>
@@ -58,7 +58,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-lg md:text-xl lg:text-2xl text-text-light mb-8 max-w-2xl mx-auto lg:mx-0"
+              className="text-base md:text-lg lg:text-xl text-text-light mb-8 max-w-2xl mx-auto lg:mx-0"
             >
               Your apps will be right back. After you move.
             </motion.p>
@@ -82,10 +82,10 @@ export default function Hero() {
                   transition={{ duration: 0.4, delay: 0.4 + (i * 0.1) }}
                   className="flex items-start gap-3 text-left"
                 >
-                  <svg className="w-6 h-6 text-primary-green flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                  <svg className="w-5 h-5 text-primary-green flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                   </svg>
-                  <p className="text-base md:text-lg text-text-light">{item}</p>
+                  <p className="text-sm md:text-base text-text-light">{item}</p>
                 </motion.div>
               ))}
             </motion.div>
@@ -119,23 +119,17 @@ export default function Hero() {
                 scale: 1
               }}
               transition={{ duration: 0.8, delay: 0.9 }}
-              className="relative w-full max-w-sm lg:max-w-sm"
+              className="relative w-full max-w-[320px] lg:max-w-[320px]"
             >
               <motion.div
-                animate={{
-                  y: [0, -10, 0],
-                }}
-                transition={{
-                  duration: 4,
-                  repeat: Infinity,
-                  ease: "easeInOut"
-                }}
+                whileHover={{ y: -8, scale: 1.02 }}
+                transition={{ duration: 0.3 }}
               >
                 <Image
                   src="/hero-phone.png"
                   alt="brb app interface on iPhone"
-                  width={384}
-                  height={768}
+                  width={320}
+                  height={640}
                   className="w-full h-auto drop-shadow-2xl"
                   priority
                 />

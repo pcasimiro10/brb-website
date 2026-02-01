@@ -16,15 +16,15 @@ export default function AppleHealthCompatibility() {
             transition={{ duration: 0.6 }}
             className="text-center lg:text-left"
           >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-8">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold mb-8">
               Works with Apple Health
             </h2>
 
-            <p className="text-lg md:text-xl text-text-light mb-6 leading-relaxed">
+            <p className="text-base md:text-lg text-text-light mb-6 leading-relaxed">
               Apple Watch, Oura Ring, Whoop, Garmin, Fitbit, or any device that syncs to Apple Health.
             </p>
 
-            <p className="text-lg md:text-xl text-text-muted leading-relaxed">
+            <p className="text-base md:text-lg text-text-muted leading-relaxed">
               No smartwatch? No problem. Just keep your iPhone in your pocket and move.
             </p>
           </motion.div>
