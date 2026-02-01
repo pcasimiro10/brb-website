@@ -33,7 +33,8 @@ export default function AppleHealthCompatibility() {
               Whoop, Fitbit, Garmin, and more.<br />
               <br />
               No smartwatch? No problem.<br />
-              Your iPhone tracks steps automatically.<br />
+              Your iPhone's built-in sensors<br />
+              track your steps automatically.<br />
               Just keep it in your pocket and move.
             </p>
           </motion.div>

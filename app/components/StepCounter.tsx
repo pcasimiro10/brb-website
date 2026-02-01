@@ -12,9 +12,9 @@ export default function StepCounter() {
     const interval = setInterval(() => {
       setSteps((prev) => {
         prevStepsRef.current = prev;
-        return prev + 1000;
+        return prev + 4;
       });
-    }, 500);
+    }, 100);
 
     return () => clearInterval(interval);
   }, []);
@@ -35,9 +35,9 @@ export default function StepCounter() {
       transition={{ duration: 0.6 }}
       className="fixed bottom-6 left-0 right-0 z-40 flex justify-center"
     >
-      <div className="bg-dark-secondary/60 backdrop-blur-sm border border-white/5 rounded-full px-4 py-2 shadow-xl opacity-60">
+      <div className="bg-dark-secondary/60 backdrop-blur-sm border border-white/5 rounded-full px-4 py-2 shadow-xl opacity-70">
         <div className="flex items-baseline gap-2">
-          <div className="flex items-center tabular-nums text-base md:text-lg font-bold text-primary-green/60">
+          <div className="flex items-center tabular-nums text-base md:text-lg font-bold text-text-muted/70">
             {digits.map((digit, index) => {
               const hasChanged = prevDigits[index] !== digit;
               return (
@@ -62,7 +62,7 @@ export default function StepCounter() {
               );
             })}
           </div>
-          <span className="text-xs md:text-sm text-text-muted/60 whitespace-nowrap">
+          <span className="text-xs md:text-sm text-text-muted/70 whitespace-nowrap">
             steps taken with brb
           </span>
         </div>
