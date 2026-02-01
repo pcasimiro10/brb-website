@@ -7,7 +7,7 @@ export default function AppleHealthCompatibility() {
   return (
     <section className="py-32 px-6">
       <div className="max-w-5xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-6 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 items-center">
           {/* Left: Text Content */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
