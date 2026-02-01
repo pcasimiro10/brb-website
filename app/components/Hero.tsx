@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center px-6 py-20 lg:py-32 overflow-hidden">
+    <section className="relative min-h-screen flex flex-col px-6 py-20 lg:py-32 overflow-hidden">
       {/* Logo */}
       <motion.div
         initial={{ opacity: 0, y: -20 }}
@@ -22,13 +22,13 @@ export default function Hero() {
         />
       </motion.div>
 
-      <div className="max-w-7xl mx-auto w-full">
+      <div className="max-w-7xl mx-auto w-full my-auto">
         {/* Social Proof Bar */}
         <motion.div
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4 }}
-          className="flex items-center justify-center lg:justify-start gap-2 text-sm text-text-muted mb-2"
+          className="flex items-center justify-center lg:justify-start gap-2 text-sm text-text-muted mb-4"
         >
           <div className="flex text-yellow-400">
             {'★★★★★'}

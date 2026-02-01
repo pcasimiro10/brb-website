@@ -6,26 +6,18 @@ import { motion } from "framer-motion";
 export default function AppleHealthCompatibility() {
   return (
     <section className="py-32 px-6">
-      <div className="max-w-6xl mx-auto">
-        <div className="flex flex-col items-center text-center gap-8">
-          {/* Text Content - Centered */}
+      <div className="max-w-5xl mx-auto">
+        <div className="flex flex-col items-center text-center gap-12">
+          {/* Text Content - Centered, No Headline */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="max-w-3xl"
+            className="max-w-2xl"
           >
-            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6">
-              Works with Apple Health
-            </h2>
-
-            <p className="text-lg md:text-xl text-text-light mb-4 leading-relaxed">
-              Apple Watch, Oura Ring, Whoop, Garmin, Fitbit, or any device that syncs to Apple Health.
-            </p>
-
-            <p className="text-lg md:text-xl text-text-muted leading-relaxed">
-              No smartwatch? No problem. Just keep your iPhone in your pocket and move.
+            <p className="text-lg md:text-xl text-text-light leading-relaxed">
+              brb works with Apple Health to track your steps automatically. Compatible with any wearable or just your iPhone in your pocket.
             </p>
           </motion.div>
 
