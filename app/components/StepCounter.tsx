@@ -1,16 +1,13 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function StepCounter() {
-  // Starting number (can be adjusted based on actual data)
-  const baseSteps = 50000000; // 50 million steps as starting point
+  const baseSteps = 50000000;
   const [steps, setSteps] = useState(baseSteps);
 
   useEffect(() => {
-    // Increment by approximately 1000 steps every second
-    // (simulates collective user activity)
     const interval = setInterval(() => {
       setSteps((prev) => prev + 1000);
     }, 1000);
@@ -18,25 +15,38 @@ export default function StepCounter() {
     return () => clearInterval(interval);
   }, []);
 
-  // Format number with commas
   const formatNumber = (num: number) => {
     return num.toLocaleString('en-US');
   };
 
+  const stepsString = formatNumber(steps);
+  const digits = stepsString.split('');
+
   return (
     <motion.div
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.8 }}
-      className="py-20 px-6 text-center"
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6 }}
+      className="fixed bottom-6 left-1/2 -translate-x-1/2 z-40"
     >
-      <div className="max-w-4xl mx-auto">
-        <div className="inline-flex items-baseline gap-2 text-text-muted">
-          <span className="text-4xl md:text-5xl lg:text-6xl font-bold text-primary-green tabular-nums">
-            {formatNumber(steps)}
-          </span>
-          <span className="text-lg md:text-xl lg:text-2xl">
+      <div className="bg-dark-secondary/90 backdrop-blur-sm border border-primary-green/30 rounded-full px-6 py-3 shadow-2xl">
+        <div className="flex items-baseline gap-2">
+          <div className="flex items-center tabular-nums text-2xl md:text-3xl font-bold text-primary-green">
+            <AnimatePresence mode="popLayout">
+              {digits.map((digit, index) => (
+                <motion.span
+                  key={`${index}-${digit}`}
+                  initial={{ y: -20, opacity: 0 }}
+                  animate={{ y: 0, opacity: 1 }}
+                  exit={{ y: 20, opacity: 0 }}
+                  transition={{ duration: 0.3, ease: "easeOut" }}
+                >
+                  {digit}
+                </motion.span>
+              ))}
+            </AnimatePresence>
+          </div>
+          <span className="text-sm md:text-base text-text-muted whitespace-nowrap">
             steps taken with brb
           </span>
         </div>

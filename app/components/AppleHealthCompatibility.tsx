@@ -28,8 +28,9 @@ export default function AppleHealthCompatibility() {
             className="text-center lg:text-left"
           >
             <p className="text-base md:text-lg lg:text-xl font-bold text-text-light leading-tight max-w-xl">
-              brb works with any Apple Health device -<br />
-              Apple Watch, Oura Ring, Whoop, and more.<br />
+              brb works with any Apple Health<br />
+              device. Apple Watch, Oura Ring,<br />
+              Whoop, Fitbit, Garmin, and more.<br />
               <br />
               No smartwatch? No problem.<br />
               Your iPhone tracks steps automatically<br />
