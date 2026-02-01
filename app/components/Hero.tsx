@@ -47,10 +47,9 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
-              className="text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold leading-[1.05] lg:leading-[1.1] mb-6"
+              className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-extrabold leading-[1.05] lg:leading-[1.1] mb-6"
             >
-              Move first.{' '}
-              <span className="text-primary-green">Scroll later.</span>
+              Move first. Scroll later.
             </motion.h1>
             
             {/* Subtitle */}
@@ -60,7 +59,7 @@ export default function Hero() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-lg md:text-xl lg:text-2xl text-text-light mb-8 max-w-2xl mx-auto lg:mx-0"
             >
-              Your apps will be right back. After you move.
+              Your apps will be right back. <span className="text-primary-green">After you move.</span>
             </motion.p>
 
             {/* Bullet Points */}

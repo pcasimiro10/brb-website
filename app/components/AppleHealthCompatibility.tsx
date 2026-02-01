@@ -16,8 +16,13 @@ export default function AppleHealthCompatibility() {
             transition={{ duration: 0.6 }}
             className="text-center lg:text-left"
           >
-            <p className="text-lg md:text-xl text-text-light leading-relaxed">
-              brb works with Apple Health to track your steps automatically. Compatible with any wearable or just your iPhone in your pocket.
+            <p className="text-lg md:text-xl lg:text-2xl font-bold text-text-light leading-relaxed">
+              brb works with Apple Health<br />
+              to track your steps automatically.<br />
+              Compatible with any wearable—<br />
+              Apple Watch, Oura Ring, Whoop, and more.<br />
+              No wearable? No problem.<br />
+              Keep your iPhone in your pocket and move.
             </p>
           </motion.div>
 
