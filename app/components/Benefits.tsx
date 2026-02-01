@@ -15,9 +15,9 @@ const stats = [
     label: "Less scrolling\ndaily",
   },
   {
-    value: "100",
-    suffix: "%",
-    label: "Put movement\nbefore screen time",
+    value: "4",
+    suffix: "+ weeks",
+    label: "Average\nstreak",
   },
 ];
 

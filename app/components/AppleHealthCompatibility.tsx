@@ -24,7 +24,8 @@ export default function AppleHealthCompatibility() {
               Apple Watch, Oura Ring, Whoop, and more.<br />
               <br />
               No wearable? No problem.<br />
-              Just keep your iPhone in your pocket and move.
+              Just keep your iPhone in your pocket<br />
+              and move.
             </p>
           </motion.div>
 
