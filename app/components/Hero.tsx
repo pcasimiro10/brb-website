@@ -39,9 +39,9 @@ export default function Hero() {
               className="space-y-3 mb-10 max-w-xl mx-auto lg:mx-0"
             >
               {[
-                'Block Instagram, TikTok, or any distracting apps',
-                'Hit your daily step goal, apps unlock automatically',
-                'No complicated schedules. No timers. Just move.'
+                'Block Instagram, TikTok, or whatever apps distract you most',
+                'Get your steps in, get your apps back',
+                'No complicated timers. No schedules. Just movement'
               ].map((item, i) => (
                 <motion.div
                   key={i}
