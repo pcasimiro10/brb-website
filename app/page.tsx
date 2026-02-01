@@ -2,6 +2,7 @@ import Header from "./components/Header";
 import Hero from "./components/Hero";
 import Benefits from "./components/Benefits";
 import AppleHealthCompatibility from "./components/AppleHealthCompatibility";
+import StepCounter from "./components/StepCounter";
 import Footer from "./components/Footer";
 import BackToTop from "./components/BackToTop";
 
@@ -12,6 +13,7 @@ export default function Home() {
       <Hero />
       <Benefits />
       <AppleHealthCompatibility />
+      <StepCounter />
       <Footer />
       <BackToTop />
     </main>
