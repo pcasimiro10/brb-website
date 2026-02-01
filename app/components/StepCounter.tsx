@@ -8,9 +8,10 @@ export default function StepCounter() {
   const [steps, setSteps] = useState(baseSteps);
 
   useEffect(() => {
+    // More aggressive: increment every 500ms
     const interval = setInterval(() => {
       setSteps((prev) => prev + 1000);
-    }, 1000);
+    }, 500);
 
     return () => clearInterval(interval);
   }, []);
@@ -29,24 +30,24 @@ export default function StepCounter() {
       transition={{ duration: 0.6 }}
       className="fixed bottom-6 left-1/2 -translate-x-1/2 z-40"
     >
-      <div className="bg-dark-secondary/90 backdrop-blur-sm border border-primary-green/30 rounded-full px-6 py-3 shadow-2xl">
+      <div className="bg-dark-secondary/90 backdrop-blur-sm border border-primary-green/20 rounded-full px-4 py-2 shadow-2xl opacity-90">
         <div className="flex items-baseline gap-2">
-          <div className="flex items-center tabular-nums text-2xl md:text-3xl font-bold text-primary-green">
+          <div className="flex items-center tabular-nums text-lg md:text-xl font-bold text-primary-green">
             <AnimatePresence mode="popLayout">
               {digits.map((digit, index) => (
                 <motion.span
-                  key={`${index}-${digit}`}
-                  initial={{ y: -20, opacity: 0 }}
+                  key={`${index}-${digit}-${steps}`}
+                  initial={{ y: -10, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
-                  exit={{ y: 20, opacity: 0 }}
-                  transition={{ duration: 0.3, ease: "easeOut" }}
+                  exit={{ y: 10, opacity: 0 }}
+                  transition={{ duration: 0.2, ease: "easeOut" }}
                 >
                   {digit}
                 </motion.span>
               ))}
             </AnimatePresence>
           </div>
-          <span className="text-sm md:text-base text-text-muted whitespace-nowrap">
+          <span className="text-xs md:text-sm text-text-muted whitespace-nowrap">
             steps taken with brb
           </span>
         </div>
