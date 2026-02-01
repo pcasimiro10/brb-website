@@ -36,7 +36,7 @@ export default function StepCounter() {
       className="fixed bottom-6 left-0 right-0 z-40 flex justify-center"
     >
       <div className="bg-dark-secondary/60 backdrop-blur-sm border border-white/5 rounded-full px-4 py-2 shadow-xl opacity-70">
-        <div className="flex items-baseline gap-2">
+        <div className="flex items-center gap-2">
           <div className="flex items-center tabular-nums text-base md:text-lg font-bold text-gray-400 min-w-fit">
             {digits.map((digit, index) => {
               const hasChanged = prevDigits[index] !== digit;
