@@ -6,8 +6,8 @@ import { motion } from "framer-motion";
 export default function AppleHealthCompatibility() {
   return (
     <section className="py-32 px-6">
-      <div className="max-w-4xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-2 items-center">
+      <div className="max-w-3xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-1 items-center">
           {/* Left: Text Content */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
