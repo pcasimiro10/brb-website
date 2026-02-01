@@ -28,7 +28,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4 }}
-          className="flex items-center justify-center lg:justify-start gap-2 text-sm text-text-muted mb-2"
+          className="flex items-center justify-center lg:justify-start gap-2 text-sm text-text-muted mb-1"
         >
           <div className="flex text-yellow-400">
             {'★★★★★'}
@@ -39,7 +39,7 @@ export default function Hero() {
         </motion.div>
 
         {/* Split Layout: Text Left, Phone Right */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-4 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-4 items-start">
           {/* Left Content Column */}
           <div className="lg:col-span-7 text-center lg:text-left">
             {/* Headline */}
