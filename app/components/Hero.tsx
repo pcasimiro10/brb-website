@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex flex-col items-center justify-center px-6 py-32 overflow-hidden">
+    <section className="relative min-h-screen flex flex-col items-center justify-center px-6 py-20 lg:py-32 overflow-hidden">
       {/* Logo */}
       <motion.div
         initial={{ opacity: 0, y: -20 }}
@@ -22,71 +22,127 @@ export default function Hero() {
         />
       </motion.div>
 
-      <div className="max-w-4xl mx-auto text-center">
-        {/* Headline */}
-        <motion.h1
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6"
-        >
-          Move first. Scroll later.
-        </motion.h1>
-        
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.3 }}
-          className="text-xl md:text-2xl text-text-light mb-4 max-w-2xl mx-auto"
-        >
-          brb blocks Instagram, TikTok, or any distracting app until you hit your daily step goal.
-        </motion.p>
-
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="text-lg md:text-xl text-text-muted mb-12 max-w-2xl mx-auto italic"
-        >
-          {`The name says it all: your apps will Be Right Back - after you move.`}
-        </motion.p>
-
-        {/* CTA Above Phone */}
+      <div className="max-w-7xl mx-auto w-full">
+        {/* Social Proof Bar */}
         <motion.div
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.5 }}
-          className="flex flex-col items-center gap-3 mb-12"
+          transition={{ duration: 0.4 }}
+          className="flex items-center justify-center lg:justify-start gap-2 text-sm text-text-muted mb-8"
         >
-          <a href="#">
-            <Image
-              src="/app-store-badge.png"
-              alt="Download on the App Store"
-              width={180}
-              height={60}
-              className="hover:opacity-80 transition-opacity"
-            />
-          </a>
-        </motion.div>
-
-        {/* Phone Mockup - The Star */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          className="relative flex justify-center items-center"
-        >
-          <div className="relative w-full max-w-sm mx-auto">
-            <Image
-              src="/hero-phone.png"
-              alt="brb app interface on iPhone"
-              width={400}
-              height={800}
-              className="w-full h-auto drop-shadow-2xl"
-              priority
-            />
+          <div className="flex text-yellow-400">
+            {'★★★★★'}
           </div>
+          <span className="font-medium text-text-light">4.8 rating</span>
+          <span className="text-text-muted">•</span>
+          <span>10,000+ active users</span>
         </motion.div>
+
+        {/* Split Layout: Text Left, Phone Right */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+          {/* Left Content Column */}
+          <div className="lg:col-span-7 text-center lg:text-left">
+            {/* Headline */}
+            <motion.h1
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+              className="text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-extrabold leading-[1.05] lg:leading-[1.1] mb-6"
+            >
+              Move first.{' '}
+              <span className="text-primary-green">Scroll later.</span>
+            </motion.h1>
+            
+            {/* Subtitle */}
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="text-xl md:text-2xl text-text-light mb-8 max-w-2xl mx-auto lg:mx-0"
+            >
+              Your apps will be right back. After you move.
+            </motion.p>
+
+            {/* Bullet Points */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3 }}
+              className="space-y-3 mb-10 max-w-xl mx-auto lg:mx-0"
+            >
+              {[
+                'Block Instagram, TikTok, or any distracting apps',
+                'Hit your daily step goal, apps unlock automatically',
+                'No complicated schedules. No timers. Just move.'
+              ].map((item, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, x: -20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.4, delay: 0.4 + (i * 0.1) }}
+                  className="flex items-start gap-3 text-left"
+                >
+                  <svg className="w-6 h-6 text-primary-green flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                  <p className="text-lg text-text-light">{item}</p>
+                </motion.div>
+              ))}
+            </motion.div>
+
+            {/* CTA */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.7 }}
+              className="flex justify-center lg:justify-start"
+            >
+              <a href="#">
+                <Image
+                  src="/app-store-badge.png"
+                  alt="Download on the App Store"
+                  width={180}
+                  height={60}
+                  className="hover:opacity-80 transition-opacity"
+                />
+              </a>
+            </motion.div>
+          </div>
+
+          {/* Right Phone Column */}
+          <div className="lg:col-span-5 flex justify-center items-center">
+            <motion.div
+              initial={{ opacity: 0, y: 40, scale: 0.95 }}
+              animate={{ 
+                opacity: 1, 
+                y: 0, 
+                scale: 1
+              }}
+              transition={{ duration: 0.8, delay: 0.9 }}
+              className="relative w-full max-w-md lg:max-w-md"
+            >
+              <motion.div
+                animate={{
+                  y: [0, -10, 0],
+                }}
+                transition={{
+                  duration: 4,
+                  repeat: Infinity,
+                  ease: "easeInOut"
+                }}
+              >
+                <Image
+                  src="/hero-phone.png"
+                  alt="brb app interface on iPhone"
+                  width={448}
+                  height={896}
+                  className="w-full h-auto drop-shadow-2xl"
+                  priority
+                />
+              </motion.div>
+            </motion.div>
+          </div>
+        </div>
       </div>
     </section>
   );

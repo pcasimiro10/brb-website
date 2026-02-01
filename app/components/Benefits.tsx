@@ -3,21 +3,21 @@
 import { motion, useInView } from "framer-motion";
 import { useRef, useEffect, useState } from "react";
 
-const results = [
+const stats = [
   {
-    stat: "40",
+    value: "40",
     suffix: "%",
-    label: "More walking on average",
+    label: "More steps\ndaily",
   },
   {
-    stat: "2",
-    suffix: "+ hours",
-    label: "Less scrolling daily",
+    value: "2",
+    suffix: "+ hrs",
+    label: "Less scrolling\ndaily",
   },
   {
-    stat: "Sustainable",
-    suffix: "",
-    label: "Habits that stick",
+    value: "100",
+    suffix: "%",
+    label: "Put movement\nbefore screen time",
   },
 ];
 
@@ -55,24 +55,12 @@ function CountUpNumber({ value, suffix }: { value: string; suffix: string }) {
   );
 }
 
-export default function SocialProof() {
+export default function Benefits() {
   return (
     <section className="py-32 px-6 bg-dark-secondary/30">
       <div className="max-w-6xl mx-auto">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold mb-6">
-            Real Results
-          </h2>
-        </motion.div>
-
         <div className="grid md:grid-cols-3 gap-8 mb-12">
-          {results.map((result, index) => (
+          {stats.map((stat, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 20 }}
@@ -81,8 +69,10 @@ export default function SocialProof() {
               transition={{ duration: 0.6, delay: index * 0.1 }}
               className="text-center"
             >
-              <CountUpNumber value={result.stat} suffix={result.suffix} />
-              <p className="text-lg md:text-xl text-text-muted mt-3">{result.label}</p>
+              <CountUpNumber value={stat.value} suffix={stat.suffix} />
+              <p className="text-lg md:text-xl text-text-muted mt-3 whitespace-pre-line">
+                {stat.label}
+              </p>
             </motion.div>
           ))}
         </div>
@@ -92,13 +82,12 @@ export default function SocialProof() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="text-center space-y-3"
+          className="bg-dark-secondary/50 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-primary-green/20 max-w-2xl mx-auto"
         >
-          <p className="text-lg text-text-muted">Plus:</p>
-          <ul className="text-lg text-text-muted space-y-2 max-w-2xl mx-auto">
-            <li>Feel more energized and focused throughout the day</li>
-            <li>Improve both mental and physical wellbeing</li>
-          </ul>
+          <p className="text-lg md:text-xl text-text-light italic mb-4">
+            {`"I've walked more in the last 2 weeks than I did all last month. This app actually works."`}
+          </p>
+          <p className="text-sm text-text-muted">- Christine C.</p>
         </motion.div>
       </div>
     </section>

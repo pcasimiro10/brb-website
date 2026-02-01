@@ -13,6 +13,8 @@ export const metadata: Metadata = {
     title: "brb: Walk to Unlock Apps | Move First, Scroll Later",
     description: "brb blocks your distracting apps until you hit your daily step goal. Turn your biggest distraction into your biggest motivation. Available on iOS.",
     type: "website",
+    url: "https://berightbackapp.com",
+    siteName: "brb",
   },
 };
 
