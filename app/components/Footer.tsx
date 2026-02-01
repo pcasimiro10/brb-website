@@ -6,7 +6,7 @@ export default function Footer() {
     <footer className="py-16 px-6 bg-[#0F0F0F]">
       <div className="max-w-5xl mx-auto">
         {/* Three Column Layout: brb, Social Proof (center), Legal */}
-        <div className="flex justify-center items-start gap-16 lg:gap-24">
+        <div className="flex justify-center items-start gap-32 lg:gap-40">
           {/* Left Column: brb */}
           <div className="flex-shrink-0">
             <h3 className="text-text-light font-semibold mb-3">brb</h3>
