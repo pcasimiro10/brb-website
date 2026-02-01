@@ -48,7 +48,7 @@ function CountUpNumber({ value, suffix }: { value: string; suffix: string }) {
   }, [isInView, numericValue]);
 
   return (
-    <div ref={ref} className="text-4xl md:text-5xl font-bold text-primary-green">
+    <div ref={ref} className="text-5xl md:text-6xl lg:text-7xl font-bold text-primary-green" style={{ textShadow: '0 0 40px rgba(191, 242, 77, 0.3)' }}>
       {isNaN(numericValue) ? value : count}
       {suffix}
     </div>
@@ -57,9 +57,9 @@ function CountUpNumber({ value, suffix }: { value: string; suffix: string }) {
 
 export default function Benefits() {
   return (
-    <section className="py-32 px-6 bg-dark-secondary/30">
+    <section className="py-24 px-6">
       <div className="max-w-6xl mx-auto">
-        <div className="grid md:grid-cols-3 gap-8 mb-12">
+        <div className="grid md:grid-cols-3 gap-12 mb-16">
           {stats.map((stat, index) => (
             <motion.div
               key={index}
@@ -70,7 +70,7 @@ export default function Benefits() {
               className="text-center"
             >
               <CountUpNumber value={stat.value} suffix={stat.suffix} />
-              <p className="text-base md:text-lg text-text-muted mt-3 whitespace-pre-line">
+              <p className="text-base md:text-lg text-text-light mt-4 whitespace-pre-line">
                 {stat.label}
               </p>
             </motion.div>
@@ -82,9 +82,9 @@ export default function Benefits() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="bg-dark-secondary/50 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-primary-green/20 max-w-2xl mx-auto"
+          className="max-w-3xl mx-auto text-center"
         >
-          <p className="text-lg md:text-xl text-text-light italic mb-4">
+          <p className="text-xl md:text-2xl text-text-light italic mb-3">
             {`"I've walked more in the last 2 weeks than I did all last month. This app actually works."`}
           </p>
           <p className="text-sm text-text-muted">- Christine C.</p>

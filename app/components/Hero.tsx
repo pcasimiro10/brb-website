@@ -28,7 +28,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: -10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4 }}
-          className="flex items-center justify-center lg:justify-start gap-2 text-sm text-text-muted mb-1"
+          className="flex items-center justify-center lg:justify-start gap-2 text-sm text-text-muted mb-3"
         >
           <div className="flex text-yellow-400">
             {'★★★★★'}
@@ -109,7 +109,7 @@ export default function Hero() {
           </div>
 
           {/* Right Phone Column */}
-          <div className="lg:col-span-5 flex justify-center items-center">
+          <div className="lg:col-span-5 flex justify-center items-center lg:self-center">
             <motion.div
               initial={{ opacity: 0, y: 40, scale: 0.95 }}
               animate={{ 
