@@ -4,7 +4,7 @@ import { useEffect, useState, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function StepCounter() {
-  const baseSteps = 50000000;
+  const baseSteps = 69143010;
   const [steps, setSteps] = useState(baseSteps);
   const prevStepsRef = useRef(baseSteps);
 
@@ -14,7 +14,7 @@ export default function StepCounter() {
         prevStepsRef.current = prev;
         return prev + 4;
       });
-    }, 100);
+    }, 250);
 
     return () => clearInterval(interval);
   }, []);
@@ -51,7 +51,7 @@ export default function StepCounter() {
                         initial={{ y: -5, opacity: 0 }}
                         animate={{ y: 0, opacity: 1 }}
                         exit={{ y: 5, opacity: 0 }}
-                        transition={{ duration: 0.15, ease: "easeOut" }}
+                        transition={{ duration: 0.25, ease: "easeOut" }}
                         className="absolute inset-0 flex items-center justify-center"
                       >
                         {digit}
