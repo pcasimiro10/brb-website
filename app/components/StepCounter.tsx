@@ -12,7 +12,7 @@ export default function StepCounter() {
     const interval = setInterval(() => {
       setSteps((prev) => {
         prevStepsRef.current = prev;
-        return prev + 1;
+        return prev + 4;
       });
     }, 1000);
 
@@ -43,7 +43,7 @@ export default function StepCounter() {
               // Only animate the last 3 digits (ones, tens, hundreds)
               const shouldAnimate = hasChanged && index >= digits.length - 3;
               return (
-                <span key={index} className="inline-block relative overflow-hidden h-[1.2em] w-[0.6em]">
+                <span key={index} className="inline-block relative h-[1.2em] w-[0.6em]">
                   {shouldAnimate ? (
                     <AnimatePresence mode="popLayout">
                       <motion.span
@@ -58,7 +58,7 @@ export default function StepCounter() {
                       </motion.span>
                     </AnimatePresence>
                   ) : (
-                    <span className="flex items-center justify-center">{digit}</span>
+                    <span className="absolute inset-0 flex items-center justify-center">{digit}</span>
                   )}
                 </span>
               );
