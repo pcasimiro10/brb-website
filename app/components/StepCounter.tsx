@@ -12,9 +12,9 @@ export default function StepCounter() {
     const interval = setInterval(() => {
       setSteps((prev) => {
         prevStepsRef.current = prev;
-        return prev + 4;
+        return prev + 1;
       });
-    }, 250);
+    }, 1000);
 
     return () => clearInterval(interval);
   }, []);
@@ -51,7 +51,7 @@ export default function StepCounter() {
                         initial={{ y: -5, opacity: 0 }}
                         animate={{ y: 0, opacity: 1 }}
                         exit={{ y: 5, opacity: 0 }}
-                        transition={{ duration: 0.25, ease: "easeOut" }}
+                        transition={{ duration: 0.4, ease: "easeOut" }}
                         className="absolute inset-0 flex items-center justify-center"
                       >
                         {digit}
