@@ -22,7 +22,7 @@ export default function Hero() {
         />
       </motion.div>
 
-      <div className="max-w-7xl mx-auto w-full pt-24 lg:pt-32">
+      <div className="max-w-6xl mx-auto w-full pt-20 lg:pt-24">
         {/* Social Proof Bar */}
         <motion.div
           initial={{ opacity: 0, y: -10 }}
