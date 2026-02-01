@@ -26,15 +26,17 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Center: Social Proof Badge */}
+          {/* Center: App Store Badge */}
           <div className="flex items-center justify-center flex-shrink-0">
-            <Image
-              src="/social-proof.png"
-              alt="brb social proof"
-              width={200}
-              height={50}
-              className="opacity-80 hover:opacity-100 transition-opacity"
-            />
+            <a href="#">
+              <Image
+                src="/app-store-badge.png"
+                alt="Download on the App Store"
+                width={160}
+                height={53}
+                className="opacity-80 hover:opacity-100 transition-opacity"
+              />
+            </a>
           </div>
 
           {/* Right Column: Legal */}

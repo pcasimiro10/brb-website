@@ -12,11 +12,11 @@ const stats = [
   {
     value: "2",
     suffix: "+ hours",
-    label: "Less screen time",
+    label: "Less daily\nscreen time",
   },
   {
     value: "67",
-    suffix: "+ days",
+    suffix: " days",
     label: "Average\nstreak",
   },
 ];
