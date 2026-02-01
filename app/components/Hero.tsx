@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex flex-col px-6 py-20 lg:py-32 overflow-hidden">
+    <section className="relative min-h-screen flex flex-col px-6 py-16 lg:py-24 overflow-hidden">
       <div className="max-w-6xl mx-auto w-full">
         {/* Split Layout: Text Left, Phone Right */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-2 items-center">

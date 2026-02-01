@@ -5,27 +5,36 @@ import { motion } from "framer-motion";
 
 export default function AppleHealthCompatibility() {
   return (
-    <section className="py-32 px-6">
+    <section className="py-32 px-6 bg-[#0A0A0A]">
       <div className="max-w-3xl mx-auto">
+        {/* Section Headline */}
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-12"
+        >
+          Compatible with All Wearables
+        </motion.h2>
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-1 items-center">
           {/* Left: Text Content */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.6, delay: 0.2 }}
             className="text-center lg:text-left"
           >
             <p className="text-base md:text-lg lg:text-xl font-bold text-text-light leading-tight max-w-xl">
-              brb works with Apple Health<br />
-              to track your steps automatically.<br />
+              Apple Watch, Oura Ring, Whoop -<br />
+              brb syncs with any device through Apple Health.<br />
               <br />
-              Compatible with any wearable -<br />
-              Apple Watch, Oura Ring, Whoop, and more.<br />
-              <br />
-              No wearable? No problem.<br />
-              Just keep your iPhone in your pocket<br />
-              and move.
+              No smartwatch? No problem.<br />
+              Your iPhone tracks steps automatically<br />
+              using its built-in motion sensors.<br />
+              Just keep your phone in your pocket and move.
             </p>
           </motion.div>
 
@@ -34,7 +43,7 @@ export default function AppleHealthCompatibility() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.8, delay: 0.2 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
             className="flex justify-center lg:justify-end"
           >
             <div className="w-full max-w-xs">

@@ -11,12 +11,12 @@ const stats = [
   },
   {
     value: "2",
-    suffix: "+ hrs",
-    label: "Less scrolling\ndaily",
+    suffix: "+ hours",
+    label: "Less screen time",
   },
   {
-    value: "4",
-    suffix: "+ weeks",
+    value: "67",
+    suffix: "+ days",
     label: "Average\nstreak",
   },
 ];
@@ -57,8 +57,19 @@ function CountUpNumber({ value, suffix }: { value: string; suffix: string }) {
 
 export default function Benefits() {
   return (
-    <section className="py-24 px-6">
+    <section className="py-32 px-6 bg-[#0D0D0D]">
       <div className="max-w-6xl mx-auto">
+        {/* Section Headline */}
+        <motion.h2
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-12"
+        >
+          Real Results
+        </motion.h2>
+
         <div className="grid md:grid-cols-3 gap-12 mb-16">
           {stats.map((stat, index) => (
             <motion.div
