@@ -19,10 +19,10 @@ export default function AppleHealthCompatibility() {
             <p className="text-lg md:text-xl lg:text-2xl font-bold text-text-light leading-relaxed">
               brb works with Apple Health<br />
               to track your steps automatically.<br />
-              Compatible with any wearable—<br />
-              Apple Watch, Oura Ring, Whoop, and more.<br />
+              Compatible with any wearable -<br />
+              Apple Watch, Oura Ring, Whoop,{' '}<span className="whitespace-nowrap">and more.</span><br />
               No wearable? No problem.<br />
-              Keep your iPhone in your pocket and move.
+              Keep your iPhone in your pocket{' '}<span className="whitespace-nowrap">and move.</span>
             </p>
           </motion.div>
 
