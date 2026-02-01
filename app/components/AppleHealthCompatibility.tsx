@@ -16,7 +16,7 @@ export default function AppleHealthCompatibility() {
             transition={{ duration: 0.6 }}
             className="text-center lg:text-left"
           >
-            <p className="text-lg md:text-xl lg:text-2xl font-bold text-text-light leading-tight max-w-xl">
+            <p className="text-base md:text-lg lg:text-xl font-bold text-text-light leading-tight max-w-xl">
               brb works with Apple Health<br />
               to track your steps automatically.<br />
               <br />
@@ -37,7 +37,7 @@ export default function AppleHealthCompatibility() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="flex justify-center lg:justify-end"
           >
-            <div className="w-full max-w-sm">
+            <div className="w-full max-w-xs">
               <Image
                 src="/watch.png"
                 alt="brb on Apple Watch with Works with Apple Health badge"
