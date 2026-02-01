@@ -3,10 +3,21 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="py-12 px-6 border-t border-dark-secondary">
+    <footer className="mt-20 py-12 px-6 border-t border-white/5">
       <div className="max-w-4xl mx-auto">
+        {/* Centered Social Proof Badge - At Top */}
+        <div className="flex justify-center mb-12">
+          <Image
+            src="/social-proof.png"
+            alt="brb social proof"
+            width={200}
+            height={50}
+            className="opacity-80 hover:opacity-100 transition-opacity"
+          />
+        </div>
+
         {/* Two Column Layout */}
-        <div className="flex justify-between gap-16 mb-8">
+        <div className="flex justify-between gap-16">
           {/* Left Column: brb */}
           <div>
             <h3 className="text-text-light font-semibold mb-3">brb</h3>
@@ -50,17 +61,6 @@ export default function Footer() {
               </Link>
             </div>
           </div>
-        </div>
-
-        {/* Centered Social Proof Badge */}
-        <div className="flex justify-center">
-          <Image
-            src="/social-proof.png"
-            alt="brb social proof"
-            width={200}
-            height={50}
-            className="opacity-80 hover:opacity-100 transition-opacity"
-          />
         </div>
       </div>
     </footer>
