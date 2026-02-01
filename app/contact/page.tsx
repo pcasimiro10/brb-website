@@ -21,7 +21,7 @@ export default function ContactPage() {
     );
     
     // Open user's email client
-    window.location.href = `mailto:betterdailyapp@gmail.com?subject=${subject}&body=${body}`;
+    window.location.href = `mailto:berightbackapp@gmail.com?subject=${subject}&body=${body}`;
     
     // Show success message
     setStatus("success");

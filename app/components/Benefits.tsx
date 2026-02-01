@@ -48,7 +48,7 @@ function CountUpNumber({ value, suffix }: { value: string; suffix: string }) {
   }, [isInView, numericValue]);
 
   return (
-    <div ref={ref} className="text-5xl md:text-6xl font-bold text-primary-green">
+    <div ref={ref} className="text-4xl md:text-5xl font-bold text-primary-green">
       {isNaN(numericValue) ? value : count}
       {suffix}
     </div>
@@ -70,7 +70,7 @@ export default function Benefits() {
               className="text-center"
             >
               <CountUpNumber value={stat.value} suffix={stat.suffix} />
-              <p className="text-lg md:text-xl text-text-muted mt-3 whitespace-pre-line">
+              <p className="text-base md:text-lg text-text-muted mt-3 whitespace-pre-line">
                 {stat.label}
               </p>
             </motion.div>
