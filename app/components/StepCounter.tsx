@@ -37,32 +37,34 @@ export default function StepCounter() {
     >
       <div className="bg-dark-secondary/60 backdrop-blur-sm border border-white/5 rounded-full px-4 py-2 shadow-xl opacity-70">
         <div className="flex items-baseline gap-2">
-          <div className="flex items-center tabular-nums text-base md:text-lg font-bold text-text-muted/70">
+          <div className="flex items-center tabular-nums text-base md:text-lg font-bold text-gray-400 min-w-fit">
             {digits.map((digit, index) => {
               const hasChanged = prevDigits[index] !== digit;
+              // Only animate the last 3 digits (ones, tens, hundreds)
+              const shouldAnimate = hasChanged && index >= digits.length - 3;
               return (
-                <span key={index} className="inline-block relative overflow-hidden h-[1.2em]">
-                  {hasChanged ? (
+                <span key={index} className="inline-block relative overflow-hidden h-[1.2em] w-[0.6em]">
+                  {shouldAnimate ? (
                     <AnimatePresence mode="popLayout">
                       <motion.span
                         key={`${index}-${digit}`}
-                        initial={{ y: -20, opacity: 0 }}
+                        initial={{ y: -5, opacity: 0 }}
                         animate={{ y: 0, opacity: 1 }}
-                        exit={{ y: 20, opacity: 0 }}
-                        transition={{ duration: 0.2, ease: "easeOut" }}
-                        className="absolute inset-0"
+                        exit={{ y: 5, opacity: 0 }}
+                        transition={{ duration: 0.15, ease: "easeOut" }}
+                        className="absolute inset-0 flex items-center justify-center"
                       >
                         {digit}
                       </motion.span>
                     </AnimatePresence>
                   ) : (
-                    <span>{digit}</span>
+                    <span className="flex items-center justify-center">{digit}</span>
                   )}
                 </span>
               );
             })}
           </div>
-          <span className="text-xs md:text-sm text-text-muted/70 whitespace-nowrap">
+          <span className="text-xs md:text-sm text-gray-400 whitespace-nowrap">
             steps taken with brb
           </span>
         </div>
