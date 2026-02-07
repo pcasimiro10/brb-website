@@ -40,7 +40,7 @@ export default function Hero() {
             >
               {[
                 'Block Instagram, TikTok, or whatever apps distract you most',
-                'Get your steps in, get your apps back',
+                'One simple rule: No steps = No screen time',
                 'No complicated timers. No schedules. Just movement'
               ].map((item, i) => (
                 <motion.div

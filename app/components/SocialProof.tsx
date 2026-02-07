@@ -21,6 +21,24 @@ const stats = [
   },
 ];
 
+const testimonials = [
+  {
+    quote: "I've walked more in the last 2 weeks than I did all last month. This app actually works.",
+    author: "Christine C.",
+    initials: "CC",
+  },
+  {
+    quote: "My Apple Watch thought I became a runner. Nope, just addicted to Instagram.",
+    author: "Marcus T.",
+    initials: "MT",
+  },
+  {
+    quote: "10K steps just to check Twitter? Worth it every time.",
+    author: "Sarah K.",
+    initials: "SK",
+  },
+];
+
 function CountUpNumber({ value, suffix }: { value: string; suffix: string }) {
   const [count, setCount] = useState(0);
   const ref = useRef(null);
@@ -55,7 +73,21 @@ function CountUpNumber({ value, suffix }: { value: string; suffix: string }) {
   );
 }
 
-export default function Benefits() {
+// Generate consistent colors for avatars based on initials
+function getAvatarColor(initials: string) {
+  const colors = [
+    'bg-blue-500',
+    'bg-purple-500',
+    'bg-pink-500',
+    'bg-green-500',
+    'bg-yellow-500',
+    'bg-red-500',
+  ];
+  const index = initials.charCodeAt(0) % colors.length;
+  return colors[index];
+}
+
+export default function SocialProof() {
   return (
     <section className="py-32 px-6 bg-[#0D0D0D]">
       <div className="max-w-6xl mx-auto">
@@ -70,7 +102,8 @@ export default function Benefits() {
           Real Results
         </motion.h2>
 
-        <div className="grid md:grid-cols-3 gap-12 mb-16">
+        {/* Stats Grid */}
+        <div className="grid md:grid-cols-3 gap-12 mb-24">
           {stats.map((stat, index) => (
             <motion.div
               key={index}
@@ -88,18 +121,32 @@ export default function Benefits() {
           ))}
         </div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="max-w-3xl mx-auto text-center"
-        >
-          <p className="text-xl md:text-2xl text-text-light italic mb-3">
-            {`"I've walked more in the last 2 weeks than I did all last month. This app actually works."`}
-          </p>
-          <p className="text-sm text-text-muted">- Christine C.</p>
-        </motion.div>
+        {/* Testimonials Grid */}
+        <div className="grid md:grid-cols-3 gap-8">
+          {testimonials.map((testimonial, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.3 + (index * 0.1) }}
+              className="flex flex-col items-center text-center"
+            >
+              {/* Avatar */}
+              <div className={`w-16 h-16 rounded-full ${getAvatarColor(testimonial.initials)} flex items-center justify-center text-white font-bold text-lg mb-4`}>
+                {testimonial.initials}
+              </div>
+              
+              {/* Quote */}
+              <p className="text-base md:text-lg text-text-light italic mb-3">
+                "{testimonial.quote}"
+              </p>
+              
+              {/* Author */}
+              <p className="text-sm text-text-muted">- {testimonial.author}</p>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </section>
   );
