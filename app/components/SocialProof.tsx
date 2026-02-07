@@ -139,7 +139,7 @@ export default function SocialProof() {
               
               {/* Quote */}
               <p className="text-base md:text-lg text-text-light italic mb-3">
-                "{testimonial.quote}"
+                &ldquo;{testimonial.quote}&rdquo;
               </p>
               
               {/* Author */}
