@@ -25,20 +25,18 @@ const testimonials = [
   {
     quote: "I've walked more in the last 2 weeks than I did all last month. This app actually works.",
     author: "Christine C.",
-    initials: "CC",
-    color: "bg-blue-500",
   },
   {
-    quote: "My Apple Watch thought I became a runner. Nope, just addicted to Instagram.",
-    author: "Marcus T.",
-    initials: "MT",
-    color: "bg-purple-500",
+    quote: "Screen time dropped from 5 hours to 90 minutes. Steps went from 3K to 10K daily. I love this app.",
+    author: "Sam K.",
   },
   {
-    quote: "10K steps just to check Twitter? Worth it every time.",
-    author: "Sarah K.",
-    initials: "SK",
-    color: "bg-pink-500",
+    quote: "I was averaging 2,500 steps a day. Now I'm at 12K. Can't believe how simple it was.",
+    author: "Jordan P.",
+  },
+  {
+    quote: "Didn't realize how sedentary I was until this app. From 2K steps to 11K daily. Actually life-changing.",
+    author: "Taylor M.",
   },
 ];
 
@@ -138,28 +136,17 @@ export default function SocialProof() {
             className="relative"
           >
             {/* Testimonial Content */}
-            <div className="flex flex-col items-center text-center min-h-[300px] justify-center">
-              {/* Avatar */}
-              <motion.div
-                key={`avatar-${activeTestimonial}`}
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.4 }}
-                className={`w-20 h-20 rounded-full ${testimonials[activeTestimonial].color} flex items-center justify-center text-white font-bold text-xl mb-4`}
-              >
-                {testimonials[activeTestimonial].initials}
-              </motion.div>
-
+            <div className="flex flex-col items-center text-center min-h-[280px] justify-center">
               {/* 5 Stars */}
               <motion.div
                 key={`stars-${activeTestimonial}`}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.4, delay: 0.1 }}
-                className="flex gap-1 mb-6"
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.4 }}
+                className="flex gap-1 mb-8"
               >
                 {[...Array(5)].map((_, i) => (
-                  <svg key={i} className="w-5 h-5 text-primary-green" fill="currentColor" viewBox="0 0 20 20">
+                  <svg key={i} className="w-6 h-6 text-primary-green" fill="currentColor" viewBox="0 0 20 20">
                     <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
                   </svg>
                 ))}
@@ -171,7 +158,7 @@ export default function SocialProof() {
                 initial={{ opacity: 0, y: 10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: 0.1 }}
-                className="text-xl md:text-2xl text-text-light italic mb-6 max-w-2xl"
+                className="text-2xl md:text-3xl text-text-light italic mb-8 max-w-2xl leading-relaxed"
               >
                 &ldquo;{testimonials[activeTestimonial].quote}&rdquo;
               </motion.p>
