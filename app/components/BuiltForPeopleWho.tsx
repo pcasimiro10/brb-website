@@ -14,7 +14,7 @@ const audiences = [
 export default function BuiltForPeopleWho() {
   return (
     <section className="py-32 px-6 bg-[#0D0D0D]">
-      <div className="max-w-4xl mx-auto">
+      <div className="max-w-3xl mx-auto">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -25,15 +25,15 @@ export default function BuiltForPeopleWho() {
           Built For People Who...
         </motion.h2>
 
-        <div className="grid md:grid-cols-2 gap-6">
+        <div className="space-y-4">
           {audiences.map((audience, index) => (
             <motion.div
               key={index}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="flex items-start gap-4 bg-dark-secondary rounded-xl p-6 hover:bg-dark-secondary/80 transition-all duration-300"
+              className="flex items-start gap-4 py-4 px-6 rounded-lg hover:bg-dark-secondary/40 transition-all duration-300"
             >
               {/* Checkmark */}
               <svg 

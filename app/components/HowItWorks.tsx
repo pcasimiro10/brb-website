@@ -7,14 +7,13 @@ import { motion, AnimatePresence } from "framer-motion";
 const steps = [
   {
     number: "01",
-    title: "PICK WHAT TO LOCK",
+    title: "BLOCK DISTRACTING APPS",
     copy: "brb shows your most-used apps ranked by screen time. Select the ones that steal your attention: Instagram, TikTok, Twitter, whatever. Lock them all with one tap.",
     image: "/block-apps.png",
   },
   {
     number: "02",
     title: "SET YOUR GOAL",
-    subtitle: "(APPS LOCK IMMEDIATELY)",
     copy: "Pick your daily steps: 2,000 (starter), 5,000 (solid), 10,000+ (beast mode). The moment you save, your apps lock and stay locked until you hit your goal. Want to check Instagram? Go for a walk. Choose Strict Mode for zero compromises, or keep the 5-minute emergency unlock if needed.",
     image: "/goal-setting.png",
   },
@@ -29,8 +28,9 @@ const steps = [
 export default function HowItWorks() {
   const [activeStep, setActiveStep] = useState(0);
   const stepRefs = useRef<(HTMLDivElement | null)[]>([]);
+  const lastActivationTime = useRef<number>(0);
 
-  // Scroll-triggered activation
+  // Scroll-triggered activation with debounce and higher threshold
   useEffect(() => {
     const observers = stepRefs.current.map((ref, index) => {
       if (!ref) return null;
@@ -38,12 +38,21 @@ export default function HowItWorks() {
       const observer = new IntersectionObserver(
         (entries) => {
           entries.forEach((entry) => {
-            if (entry.isIntersecting && entry.intersectionRatio > 0.5) {
-              setActiveStep(index);
+            // Increased threshold to 75% and added debounce
+            if (entry.isIntersecting && entry.intersectionRatio > 0.75) {
+              const now = Date.now();
+              // Only activate if 300ms has passed since last activation (debounce)
+              if (now - lastActivationTime.current > 300) {
+                setActiveStep(index);
+                lastActivationTime.current = now;
+              }
             }
           });
         },
-        { threshold: [0.5], rootMargin: "-20% 0px -20% 0px" }
+        { 
+          threshold: [0.75], // Increased from 0.5 to 0.75
+          rootMargin: "-10% 0px -10% 0px" 
+        }
       );
 
       observer.observe(ref);
@@ -57,6 +66,7 @@ export default function HowItWorks() {
 
   const handleStepClick = (index: number) => {
     setActiveStep(index);
+    lastActivationTime.current = Date.now();
     stepRefs.current[index]?.scrollIntoView({ 
       behavior: 'smooth', 
       block: 'center' 
@@ -90,8 +100,8 @@ export default function HowItWorks() {
 
         {/* Steps + Image Layout */}
         <div className="grid lg:grid-cols-[1.5fr,1fr] gap-12 items-start">
-          {/* Left: Steps */}
-          <div className="space-y-6">
+          {/* Left: Steps with scroll snap */}
+          <div className="space-y-6 scroll-smooth" style={{ scrollSnapType: 'y proximity' }}>
             {steps.map((step, index) => {
               const isActive = activeStep === index;
               
@@ -107,6 +117,7 @@ export default function HowItWorks() {
                   className={`cursor-pointer transition-all duration-300 ${
                     isActive ? 'opacity-100' : 'opacity-60 hover:opacity-100'
                   }`}
+                  style={{ scrollSnapAlign: 'center' }}
                 >
                   <div className={`p-6 lg:p-8 rounded-2xl ${
                     isActive ? 'bg-dark-secondary' : 'bg-transparent'
@@ -124,13 +135,6 @@ export default function HowItWorks() {
                         }`}>
                           {step.title}
                         </h3>
-                        {step.subtitle && (
-                          <p className={`text-sm md:text-base mt-1 transition-colors ${
-                            isActive ? 'text-text-muted' : 'text-text-muted/60'
-                          }`}>
-                            {step.subtitle}
-                          </p>
-                        )}
                       </div>
                     </div>
 
