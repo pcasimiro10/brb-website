@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
+import { useState } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -27,51 +27,6 @@ const steps = [
 
 export default function HowItWorks() {
   const [activeStep, setActiveStep] = useState(0);
-  const stepRefs = useRef<(HTMLDivElement | null)[]>([]);
-  const lastActivationTime = useRef<number>(0);
-
-  // Scroll-triggered activation with debounce and higher threshold
-  useEffect(() => {
-    const observers = stepRefs.current.map((ref, index) => {
-      if (!ref) return null;
-      
-      const observer = new IntersectionObserver(
-        (entries) => {
-          entries.forEach((entry) => {
-            // Increased threshold to 75% and added debounce
-            if (entry.isIntersecting && entry.intersectionRatio > 0.75) {
-              const now = Date.now();
-              // Only activate if 300ms has passed since last activation (debounce)
-              if (now - lastActivationTime.current > 300) {
-                setActiveStep(index);
-                lastActivationTime.current = now;
-              }
-            }
-          });
-        },
-        { 
-          threshold: [0.75], // Increased from 0.5 to 0.75
-          rootMargin: "-10% 0px -10% 0px" 
-        }
-      );
-
-      observer.observe(ref);
-      return observer;
-    });
-
-    return () => {
-      observers.forEach((observer) => observer?.disconnect());
-    };
-  }, []);
-
-  const handleStepClick = (index: number) => {
-    setActiveStep(index);
-    lastActivationTime.current = Date.now();
-    stepRefs.current[index]?.scrollIntoView({ 
-      behavior: 'smooth', 
-      block: 'center' 
-    });
-  };
 
   return (
     <section className="py-32 px-6 bg-[#0A0A0A]">
@@ -84,7 +39,7 @@ export default function HowItWorks() {
           transition={{ duration: 0.6 }}
           className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-6"
         >
-          HOW BRB WORKS
+          How It Works
         </motion.h2>
 
         {/* Section Intro */}
@@ -100,27 +55,25 @@ export default function HowItWorks() {
 
         {/* Steps + Image Layout */}
         <div className="grid lg:grid-cols-[1.5fr,1fr] gap-12 items-start">
-          {/* Left: Steps with scroll snap */}
-          <div className="space-y-6 scroll-smooth" style={{ scrollSnapType: 'y proximity' }}>
+          {/* Left: Clickable Steps */}
+          <div className="space-y-6">
             {steps.map((step, index) => {
               const isActive = activeStep === index;
               
               return (
                 <motion.div
                   key={index}
-                  ref={(el) => { stepRefs.current[index] = el; }}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: index * 0.2 }}
-                  onClick={() => handleStepClick(index)}
+                  onClick={() => setActiveStep(index)}
                   className={`cursor-pointer transition-all duration-300 ${
                     isActive ? 'opacity-100' : 'opacity-60 hover:opacity-100'
                   }`}
-                  style={{ scrollSnapAlign: 'center' }}
                 >
-                  <div className={`p-6 lg:p-8 rounded-2xl ${
-                    isActive ? 'bg-dark-secondary' : 'bg-transparent'
+                  <div className={`p-6 lg:p-8 rounded-2xl transition-all ${
+                    isActive ? 'bg-dark-secondary' : 'bg-transparent hover:bg-dark-secondary/30'
                   }`}>
                     {/* Number + Title */}
                     <div className="flex items-baseline gap-4 mb-4">
