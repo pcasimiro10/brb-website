@@ -14,13 +14,13 @@ const steps = [
   {
     number: "02",
     title: "SET YOUR GOAL",
-    copy: "Pick your daily steps: 2,000 (starter), 5,000 (solid), 10,000+ (beast mode). The moment you save, your apps lock and stay locked until you hit your goal. Want to check Instagram? Go for a walk. Choose Strict Mode for zero compromises, or keep the 5-minute emergency unlock if needed.",
+    copy: "Set your daily step goal. Your apps lock until you hit it. Want to scroll? Start walking.",
     image: "/goal-setting.png",
   },
   {
     number: "03",
     title: "WALK TO UNLOCK",
-    copy: "Every step fills that circle. Track your progress in real-time all day. Hit 100%? Everything unlocks instantly and that green glow is deeply satisfying. Miss your goal? Apps stay locked until tomorrow. Build streaks that actually stick.",
+    copy: "Watch that circle fill with every step. Hit 100%? Apps unlock. Miss it? They stay locked. Track your streaks, compete with yourself, actually build habits that last.",
     image: "/unlock.png",
   },
 ];

@@ -64,17 +64,6 @@ export default function KeyFeatures() {
   return (
     <section className="py-32 px-6 bg-[#0D0D0D]">
       <div className="max-w-6xl mx-auto">
-        {/* Section Title */}
-        <motion.h2
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-          className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-16"
-        >
-          Built to Actually Work
-        </motion.h2>
-
         {/* Features Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => (

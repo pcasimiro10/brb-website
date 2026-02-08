@@ -33,7 +33,7 @@ export default function BuiltForPeopleWho() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="flex items-start gap-4 py-4 px-6 rounded-lg hover:bg-dark-secondary/40 transition-all duration-300"
+              className="flex items-start gap-4 bg-dark-secondary rounded-xl p-6 hover:bg-dark-secondary/80 transition-all duration-300"
             >
               {/* Checkmark */}
               <svg 
