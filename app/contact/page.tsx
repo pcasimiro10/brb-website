@@ -1,10 +1,10 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, Suspense } from "react";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 
-export default function ContactPage() {
+function ContactForm() {
   const searchParams = useSearchParams();
   const [formData, setFormData] = useState({
     email: "",
@@ -54,7 +54,7 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="min-h-screen bg-dark-bg text-text-light px-6 py-20">
+    <>
       <div className="max-w-2xl mx-auto">
         <h1 className="text-4xl md:text-5xl font-bold mb-6">Contact us</h1>
         
@@ -107,6 +107,21 @@ export default function ContactPage() {
           </button>
         </form>
       </div>
+    </>
+  );
+}
+
+export default function ContactPage() {
+  return (
+    <div className="min-h-screen bg-dark-bg text-text-light px-6 py-20">
+      <Suspense fallback={
+        <div className="max-w-2xl mx-auto">
+          <h1 className="text-4xl md:text-5xl font-bold mb-6">Contact us</h1>
+          <p className="text-text-muted text-lg mb-12">Loading...</p>
+        </div>
+      }>
+        <ContactForm />
+      </Suspense>
     </div>
   );
 }
