@@ -25,7 +25,7 @@ export default function Header() {
         </Link>
 
         {/* Center Navigation */}
-        <nav className="hidden md:flex items-center gap-8 absolute left-1/2 -translate-x-1/2">
+        <nav className="flex items-center gap-4 md:gap-8 absolute left-1/2 -translate-x-1/2">
           <Link
             href="/"
             className="text-text-light hover:text-primary-green transition-colors text-sm font-medium"

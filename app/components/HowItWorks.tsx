@@ -13,7 +13,7 @@ const steps = [
   {
     number: "02",
     title: "SET YOUR GOAL",
-    copy: "Set your daily step goal. Your apps lock until you hit it. Want to scroll? Start walking.",
+    copy: "Set your daily step goal. Your apps lock until you hit it. Want to scroll? Start moving.",
     image: "/goal-setting.png",
   },
   {
@@ -34,21 +34,10 @@ export default function HowItWorks() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-6"
+          className="text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-24"
         >
           How It Works
         </motion.h2>
-
-        {/* Section Intro */}
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="text-lg md:text-xl text-text-light text-center max-w-3xl mx-auto mb-24"
-        >
-          brb blocks Instagram, TikTok, or any distracting app until you hit your daily step goal.
-        </motion.p>
 
         {/* Alternating Steps */}
         <div className="space-y-32">
