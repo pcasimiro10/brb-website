@@ -26,7 +26,7 @@ export default function FinalCTA() {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="text-lg md:text-xl lg:text-2xl text-text-light mb-10"
         >
-          Join thousands of people who are moving more and scrolling less.
+          Join thousands of people who are <span className="text-primary-green">moving more and scrolling less</span>.
         </motion.p>
 
         {/* App Store Badge */}

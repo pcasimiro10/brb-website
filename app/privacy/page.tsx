@@ -134,8 +134,8 @@ export default function PrivacyPage() {
           <h2 className="text-2xl md:text-3xl font-bold mb-4">7. Contact Us</h2>
           <p className="text-text-muted leading-relaxed">
             If you have any questions about this Privacy Policy or how brb handles your data, please contact us at{" "}
-            <a href="mailto:betterdailyapp@gmail.com" className="text-primary-green hover:underline">
-              betterdailyapp@gmail.com
+            <a href="mailto:berightbackapp@gmail.com" className="text-primary-green hover:underline">
+              berightbackapp@gmail.com
             </a>
           </p>
         </section>

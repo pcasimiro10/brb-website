@@ -122,8 +122,8 @@ export default function TermsPage() {
           <h2 className="text-2xl md:text-3xl font-bold mb-4">7. Contact</h2>
           <p className="text-text-muted leading-relaxed">
             If you have any questions about these terms, please contact us at{" "}
-            <a href="mailto:betterdailyapp@gmail.com" className="text-primary-green hover:underline">
-              betterdailyapp@gmail.com
+            <a href="mailto:berightbackapp@gmail.com" className="text-primary-green hover:underline">
+              berightbackapp@gmail.com
             </a>
           </p>
         </section>

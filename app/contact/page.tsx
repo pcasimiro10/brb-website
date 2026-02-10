@@ -5,7 +5,6 @@ import Link from "next/link";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
-    name: "",
     email: "",
     message: "",
   });
@@ -15,9 +14,9 @@ export default function ContactPage() {
     e.preventDefault();
     
     // Create mailto link with form data
-    const subject = encodeURIComponent(`Contact from ${formData.name}`);
+    const subject = encodeURIComponent(`Contact from ${formData.email}`);
     const body = encodeURIComponent(
-      `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
+      `Email: ${formData.email}\n\nMessage:\n${formData.message}`
     );
     
     // Open user's email client
@@ -28,7 +27,7 @@ export default function ContactPage() {
     
     // Reset form
     setTimeout(() => {
-      setFormData({ name: "", email: "", message: "" });
+      setFormData({ email: "", message: "" });
       setStatus("idle");
     }, 3000);
   };
@@ -59,23 +58,8 @@ export default function ContactPage() {
 
         <form onSubmit={handleSubmit} className="space-y-6">
           <div>
-            <label htmlFor="name" className="block text-text-light mb-2">
-              Name
-            </label>
-            <input
-              type="text"
-              id="name"
-              name="name"
-              value={formData.name}
-              onChange={handleChange}
-              required
-              className="w-full bg-dark-secondary border border-text-muted/20 rounded-lg px-4 py-3 text-text-light placeholder-text-muted focus:outline-none focus:border-primary-green transition-colors"
-            />
-          </div>
-
-          <div>
             <label htmlFor="email" className="block text-text-light mb-2">
-              Email
+              Email (required)
             </label>
             <input
               type="email"
@@ -90,7 +74,7 @@ export default function ContactPage() {
 
           <div>
             <label htmlFor="message" className="block text-text-light mb-2">
-              Message
+              Message (required)
             </label>
             <textarea
               id="message"

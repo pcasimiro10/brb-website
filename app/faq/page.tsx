@@ -49,7 +49,7 @@ const faqSections: FAQSection[] = [
 2. Verify Screen Time permissions - Go to iOS Settings > Screen Time and make sure brb has the necessary permissions enabled.
 3. Remove conflicting Screen Time limits - If you have manual Screen Time limits or Downtime schedules in iOS Settings, remove them as they can conflict with brb.
 4. Restart your iPhone - Sometimes iOS needs a restart to sync Screen Time changes properly.
-5. If issues persist, contact support at betterdailyapp@gmail.com`,
+5. If issues persist, contact support at berightbackapp@gmail.com`,
       },
       {
         question: "Why is my step count not updating?",
@@ -134,11 +134,11 @@ If you believe this is an error, contact us with the date and we'll investigate.
     faqs: [
       {
         question: "How do I report a bug or request a feature?",
-        answer: "Email us at betterdailyapp@gmail.com with details about the issue or your feature suggestion. We read every message and prioritize based on user feedback.",
+        answer: "Email us at berightbackapp@gmail.com with details about the issue or your feature suggestion. We read every message and prioritize based on user feedback.",
       },
       {
         question: "I have a question not answered here",
-        answer: "Contact us at betterdailyapp@gmail.com and we'll help you out. We typically respond within 24 hours.",
+        answer: "Contact us at berightbackapp@gmail.com and we'll help you out. We typically respond within 24 hours.",
       },
     ],
   },
@@ -264,7 +264,7 @@ export default function FAQPage() {
             {`Can't find what you're looking for? We're here to help.`}
           </p>
           <a
-            href="mailto:betterdailyapp@gmail.com"
+            href="/contact"
             className="inline-block bg-primary-green text-dark-bg font-bold text-lg px-8 py-4 rounded-full hover:bg-primary-green/90 transition-all duration-300 hover:scale-105"
           >
             Email Support

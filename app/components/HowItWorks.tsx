@@ -19,7 +19,7 @@ const steps = [
   {
     number: "03",
     title: "WALK TO UNLOCK",
-    copy: "Watch that circle fill with every step. Hit 100%? Apps unlock. Miss it? They stay locked. Track your streaks, compete with yourself, actually build habits that last.",
+    copy: "Watch that ring fill with every step. Hit 100%? Apps unlock. Miss it? They stay locked. Track your streaks, compete with yourself, build habits that actually last.",
     image: "/unlock.png",
   },
 ];

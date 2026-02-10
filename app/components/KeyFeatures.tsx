@@ -10,7 +10,7 @@ const features = [
       </svg>
     ),
     title: "Smart App Blocking",
-    description: "See your biggest distractions ranked by screen time. Safari, Instagram, TikTok — all laid out. Then block exactly what's stealing your time.",
+    description: "See your biggest distractions ranked by screen time. Safari, Instagram, TikTok - all laid out. Then block exactly what's stealing your time.",
   },
   {
     icon: (
@@ -19,7 +19,7 @@ const features = [
       </svg>
     ),
     title: "Honest Goal Setting",
-    description: "Raise your step goal anytime. Lowering your goal goes into effect the following day. No shortcuts — today's goal is today's goal.",
+    description: "Raise your step goal anytime. Lowering your goal goes into effect the following day. No shortcuts - today's goal is today's goal.",
   },
   {
     icon: (
