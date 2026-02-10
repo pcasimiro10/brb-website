@@ -42,18 +42,18 @@ export default function FinalCTA() {
             <Image
               src="/app-store-badge.png"
               alt="Download on the App Store"
-              width={200}
-              height={67}
-              className="hover:opacity-80 transition-opacity"
+              width={499}
+              height={166}
+              className="h-[67px] w-auto hover:opacity-80 transition-opacity"
             />
           </a>
           <Link href="/contact?waitlist=android" className="inline-block">
             <Image
               src="/google-play-badge-coming-soon.png"
               alt="Coming soon on Google Play"
-              width={200}
-              height={67}
-              className="hover:opacity-90 transition-opacity opacity-80"
+              width={553}
+              height={166}
+              className="h-[67px] w-auto hover:opacity-90 transition-opacity opacity-80"
             />
           </Link>
         </motion.div>
