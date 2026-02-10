@@ -5,10 +5,10 @@ export default function Footer() {
   return (
     <footer className="py-16 px-6 bg-[#0F0F0F]">
       <div className="max-w-5xl mx-auto">
-        {/* Grid Layout: 3 columns on desktop, stacked on mobile */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 text-center md:text-left">
+        {/* Flex Layout: 3 columns spread on desktop, stacked on mobile */}
+        <div className="flex flex-col gap-8 md:flex-row md:justify-between md:items-start">
           {/* Left Column: brb */}
-          <div className="md:order-1">
+          <div className="order-1 text-center md:text-left">
             <h3 className="text-text-light font-semibold mb-3">brb</h3>
             <div className="flex flex-col gap-2 items-center md:items-start">
               <a
@@ -26,7 +26,7 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Center: Social Proof (center on desktop, bottom on mobile) */}
+          {/* Center: Social Proof (bottom on mobile, center on desktop) */}
           <div className="order-3 md:order-2 flex items-center justify-center">
             <Image
               src="/social-proof.png"
@@ -38,7 +38,7 @@ export default function Footer() {
           </div>
 
           {/* Right Column: Legal */}
-          <div className="md:order-3">
+          <div className="order-2 md:order-3 text-center md:text-left">
             <h3 className="text-text-light font-semibold mb-3">Legal</h3>
             <div className="flex flex-col gap-2 items-center md:items-start">
               <Link
