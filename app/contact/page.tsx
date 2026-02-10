@@ -1,14 +1,26 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 
 export default function ContactPage() {
+  const searchParams = useSearchParams();
   const [formData, setFormData] = useState({
     email: "",
     message: "",
   });
   const [status, setStatus] = useState<"idle" | "success">("idle");
+
+  // Pre-fill message if coming from Android waitlist
+  useEffect(() => {
+    if (searchParams.get('waitlist') === 'android') {
+      setFormData({
+        email: "",
+        message: "Add me to the Android waitlist. I'm ready to move more and scroll less.",
+      });
+    }
+  }, [searchParams]);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();

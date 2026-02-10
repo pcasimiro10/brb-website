@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { motion } from "framer-motion";
 
 export default function FinalCTA() {
@@ -29,13 +30,13 @@ export default function FinalCTA() {
           Join thousands of people who are <span className="text-primary-green">moving more and scrolling less</span>.
         </motion.p>
 
-        {/* App Store Badge */}
+        {/* App Store Badges */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="flex justify-center"
+          className="flex flex-col sm:flex-row gap-4 justify-center items-center"
         >
           <a href="#" className="inline-block">
             <Image
@@ -46,6 +47,15 @@ export default function FinalCTA() {
               className="hover:opacity-80 transition-opacity"
             />
           </a>
+          <Link href="/contact?waitlist=android" className="inline-block">
+            <Image
+              src="/google-play-badge-coming-soon.png"
+              alt="Coming soon on Google Play"
+              width={200}
+              height={67}
+              className="hover:opacity-90 transition-opacity opacity-80"
+            />
+          </Link>
         </motion.div>
       </div>
     </section>

@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { motion } from "framer-motion";
 
 export default function Hero() {
@@ -63,7 +64,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.7 }}
-              className="flex justify-center lg:justify-start"
+              className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center"
             >
               <a href="#">
                 <Image
@@ -74,6 +75,15 @@ export default function Hero() {
                   className="hover:opacity-80 transition-opacity"
                 />
               </a>
+              <Link href="/contact?waitlist=android">
+                <Image
+                  src="/google-play-badge-coming-soon.png"
+                  alt="Coming soon on Google Play"
+                  width={180}
+                  height={60}
+                  className="hover:opacity-90 transition-opacity opacity-80"
+                />
+              </Link>
             </motion.div>
           </div>
 
