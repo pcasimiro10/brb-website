@@ -107,7 +107,7 @@ export default function HowItWorks() {
                     whileInView={{ opacity: 1, scale: 1 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.8, delay: 0.4 }}
-                    className="relative w-full max-w-sm mx-auto lg:max-w-md"
+                    className="relative w-full max-w-xs mx-auto lg:max-w-sm"
                   >
                     <Image
                       src={step.image}
