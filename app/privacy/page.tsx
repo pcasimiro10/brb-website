@@ -139,25 +139,6 @@ export default function PrivacyPage() {
             </a>
           </p>
         </section>
-
-        <div className="mt-16 pt-8 border-t border-dark-secondary text-center">
-          <Link href="/" className="text-text-muted hover:text-text-light transition-colors">
-            Home
-          </Link>
-          <span className="text-text-muted mx-4">|</span>
-          <Link href="/privacy" className="text-text-muted hover:text-text-light transition-colors">
-            Privacy
-          </Link>
-          <span className="text-text-muted mx-4">|</span>
-          <Link href="/terms" className="text-text-muted hover:text-text-light transition-colors">
-            Terms
-          </Link>
-          <span className="text-text-muted mx-4">|</span>
-          <Link href="/contact" className="text-text-muted hover:text-text-light transition-colors">
-            Contact
-          </Link>
-          <p className="text-text-muted text-sm mt-6">© 2025 brb. All rights reserved.</p>
-        </div>
       </div>
     </div>
   );
