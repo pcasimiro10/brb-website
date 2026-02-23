@@ -12,7 +12,9 @@ export default function Footer() {
             <h3 className="text-text-light font-semibold mb-3">brb</h3>
             <div className="flex flex-col gap-2 items-center md:items-start">
               <a
-                href="#"
+                href="https://apps.apple.com/app/brb-walk-to-unlock-apps/id6757323160"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-text-muted hover:text-text-light transition-colors text-sm"
               >
                 App Store

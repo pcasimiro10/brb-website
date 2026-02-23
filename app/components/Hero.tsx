@@ -66,7 +66,11 @@ export default function Hero() {
               transition={{ duration: 0.5, delay: 0.7 }}
               className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center"
             >
-              <a href="#">
+              <a 
+                href="https://apps.apple.com/app/brb-walk-to-unlock-apps/id6757323160"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Image
                   src="/app-store-badge.png"
                   alt="Download on the App Store"
