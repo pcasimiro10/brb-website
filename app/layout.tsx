@@ -17,6 +17,22 @@ export const metadata: Metadata = {
     type: "website",
     url: "https://berightbackapp.com",
     siteName: "brb",
+    images: [
+      {
+        url: "https://berightbackapp.com/og-graph-2.png",
+        width: 1200,
+        height: 630,
+        alt: "brb – scroll less, walk more. Block your apps until you hit your step goal.",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "brb: Walk to Unlock Apps | Move First, Scroll Later",
+    description: "brb blocks your distracting apps until you hit your daily step goal. Turn your biggest distraction into your biggest motivation. Available on iOS.",
+    images: ["https://berightbackapp.com/og-graph-2.png"],
+    creator: "@pat_caz",
+    site: "@berightbackapp",
   },
 };
 
