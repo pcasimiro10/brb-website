@@ -27,7 +27,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-lg md:text-xl text-text-muted max-w-2xl mx-auto lg:mx-0"
+              className="text-lg md:text-xl text-text-light max-w-2xl mx-auto lg:mx-0"
             >
               Block distracting apps until you hit your daily step goal.
             </motion.p>
@@ -39,7 +39,7 @@ export default function Hero() {
               transition={{ duration: 0.6, delay: 0.25 }}
               className="text-lg md:text-xl text-primary-green max-w-2xl mx-auto lg:mx-0 mb-6 mt-1"
             >
-              your apps will be right back. after you move.
+              Your apps will be right back. After you move.
             </motion.p>
 
             {/* Bullet Points */}
@@ -86,7 +86,7 @@ export default function Hero() {
                 >
                   Download Free (iPhone)
                 </a>
-                <p className="text-sm text-text-muted">
+                <p className="text-xs text-text-muted">
                   7-day free trial · cancel anytime
                 </p>
                 <Link
