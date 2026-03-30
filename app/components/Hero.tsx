@@ -64,29 +64,24 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.7 }}
-              className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start items-center"
+              className="flex flex-col items-center lg:items-start gap-3"
             >
-              <a 
+              <a
                 href="https://apps.apple.com/app/brb-walk-to-unlock-apps/id6757323160"
                 target="_blank"
                 rel="noopener noreferrer"
+                className="inline-flex items-center justify-center bg-primary-green text-dark-bg font-bold text-lg px-8 py-4 rounded-full hover:bg-primary-green/90 transition-all duration-300 hover:scale-105 shadow-lg shadow-primary-green/20"
               >
-                <Image
-                  src="/app-store-badge.png"
-                  alt="Download on the App Store"
-                  width={499}
-                  height={166}
-                  className="h-[60px] w-auto hover:opacity-80 transition-opacity"
-                />
+                Download free
               </a>
-              <Link href="/contact?waitlist=android">
-                <Image
-                  src="/google-play-badge-coming-soon.png"
-                  alt="Coming soon on Google Play"
-                  width={553}
-                  height={166}
-                  className="h-[60px] w-auto hover:opacity-90 transition-opacity opacity-80"
-                />
+              <p className="text-sm text-text-muted">
+                Free 7-day trial · cancel anytime
+              </p>
+              <Link
+                href="/contact?waitlist=android"
+                className="text-sm text-text-muted hover:text-text-light transition-colors underline underline-offset-2"
+              >
+                Android? Join the waitlist →
               </Link>
             </motion.div>
           </div>
