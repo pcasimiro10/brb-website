@@ -76,7 +76,7 @@ export default function Hero() {
               transition={{ duration: 0.5, delay: 0.7 }}
               className="flex flex-col items-center lg:items-start gap-3"
             >
-              {/* Button + micro-copy + Android link */}
+              {/* Button + micro-copy + Android link grouped and centered together */}
               <div className="flex flex-col items-center gap-2">
                 <a
                   href="https://apps.apple.com/app/brb-walk-to-unlock-apps/id6757323160"
@@ -89,16 +89,16 @@ export default function Hero() {
                 <p className="text-xs text-text-muted">
                   7-day free trial · cancel anytime
                 </p>
+                <p className="text-sm text-text-muted">
+                  Android?{" "}
+                  <Link
+                    href="/contact?waitlist=android"
+                    className="underline underline-offset-2 hover:text-text-light transition-colors"
+                  >
+                    Join the waitlist →
+                  </Link>
+                </p>
               </div>
-              <p className="text-sm text-text-muted">
-                Android?{" "}
-                <Link
-                  href="/contact?waitlist=android"
-                  className="underline underline-offset-2 hover:text-text-light transition-colors"
-                >
-                  Join the waitlist →
-                </Link>
-              </p>
             </motion.div>
           </div>
 
