@@ -12,6 +12,17 @@ export default function Hero() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-2 items-center">
           {/* Left Content Column */}
           <div className="lg:col-span-7 text-center lg:text-left">
+            {/* Proof line */}
+            <motion.p
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.05 }}
+              className="text-sm text-text-muted mb-4 flex items-center gap-2 justify-center lg:justify-start"
+            >
+              <span className="text-yellow-400 tracking-tight">★★★★★</span>
+              <span>5.0 App Store rating · Join the movement</span>
+            </motion.p>
+
             {/* Headline */}
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
@@ -19,7 +30,7 @@ export default function Hero() {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-extrabold leading-[1.05] lg:leading-[1.1] mb-6"
             >
-              Move first. Scroll later.
+              Walk to unlock your apps.
             </motion.h1>
             
             {/* Subtitle */}
@@ -29,7 +40,8 @@ export default function Hero() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-lg md:text-xl lg:text-2xl text-text-light mb-8 max-w-2xl mx-auto lg:mx-0"
             >
-              Your apps will be right back. <span className="text-primary-green">After you move.</span>
+              Block your most distracting apps until you hit your daily step goal.{" "}
+              <span className="text-primary-green">Your apps will Be Right Back. After you move.</span>
             </motion.p>
 
             {/* Bullet Points */}
@@ -40,9 +52,9 @@ export default function Hero() {
               className="space-y-3 mb-10 max-w-xl mx-auto lg:mx-0"
             >
               {[
-                'Block Instagram, TikTok, or whatever apps distract you most',
-                'One simple rule: No steps = No screen time',
-                'No complicated timers. No schedules. Just movement'
+                'No steps = no screen time. One simple rule.',
+                'Strict Mode: no ignore button, no way out.',
+                'Works with Apple Watch, Oura, Garmin — or just your iPhone.',
               ].map((item, i) => (
                 <motion.div
                   key={i}
@@ -72,11 +84,8 @@ export default function Hero() {
                 rel="noopener noreferrer"
                 className="inline-flex items-center justify-center bg-primary-green text-dark-bg font-bold text-lg px-8 py-4 rounded-full hover:bg-primary-green/90 transition-all duration-300 hover:scale-105 shadow-lg shadow-primary-green/20"
               >
-                Download free
+                Download Free (iPhone)
               </a>
-              <p className="text-sm text-text-muted">
-                Free 7-day trial · cancel anytime
-              </p>
               <Link
                 href="/contact?waitlist=android"
                 className="text-sm text-text-muted hover:text-text-light transition-colors underline underline-offset-2"
