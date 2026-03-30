@@ -12,17 +12,6 @@ export default function Hero() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-2 items-center">
           {/* Left Content Column */}
           <div className="lg:col-span-7 text-center lg:text-left">
-            {/* Proof line */}
-            <motion.p
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.05 }}
-              className="text-sm text-text-muted mb-4 flex items-center gap-2 justify-center lg:justify-start"
-            >
-              <span className="text-yellow-400 tracking-tight">★★★★★</span>
-              <span>5.0 App Store rating · Join the movement</span>
-            </motion.p>
-
             {/* Headline */}
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
@@ -32,16 +21,25 @@ export default function Hero() {
             >
               Walk to unlock your apps.
             </motion.h1>
-            
-            {/* Subtitle */}
+
+            {/* Subtitle line 1 */}
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-lg md:text-xl lg:text-2xl text-text-light mb-8 max-w-2xl mx-auto lg:mx-0"
+              className="text-lg md:text-xl lg:text-2xl text-text-light max-w-2xl mx-auto lg:mx-0"
             >
-              Block your most distracting apps until you hit your daily step goal.{" "}
-              <span className="text-primary-green">Your apps will Be Right Back. After you move.</span>
+              Block your most distracting apps until you hit your daily step goal.
+            </motion.p>
+
+            {/* Subtitle line 2 */}
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.25 }}
+              className="text-lg md:text-xl lg:text-2xl text-primary-green max-w-2xl mx-auto lg:mx-0 mb-8 mt-2"
+            >
+              Your apps will Be Right Back. After you move.
             </motion.p>
 
             {/* Bullet Points */}
@@ -49,12 +47,12 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="space-y-3 mb-10 max-w-xl mx-auto lg:mx-0"
+              className="space-y-3 mb-8 max-w-xl mx-auto lg:mx-0"
             >
               {[
                 'No steps = no screen time. One simple rule.',
                 'Strict Mode: no ignore button, no way out.',
-                'Works with Apple Watch, Oura, Garmin — or just your iPhone.',
+                'Works with Apple Watch, Oura, Whoop, Garmin — or just your iPhone.',
               ].map((item, i) => (
                 <motion.div
                   key={i}
@@ -78,6 +76,17 @@ export default function Hero() {
               transition={{ duration: 0.5, delay: 0.7 }}
               className="flex flex-col items-center lg:items-start gap-3"
             >
+              {/* Proof line — above CTA */}
+              <motion.p
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.65 }}
+                className="text-sm text-text-muted flex items-center gap-2 justify-center lg:justify-start"
+              >
+                <span className="text-yellow-400 tracking-tight">★★★★★</span>
+                <span>5.0 App Store rating · Join the movement</span>
+              </motion.p>
+
               <a
                 href="https://apps.apple.com/app/brb-walk-to-unlock-apps/id6757323160"
                 target="_blank"
