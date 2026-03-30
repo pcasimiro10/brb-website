@@ -41,13 +41,17 @@ const testimonials = [
 ];
 
 function CountUpNumber({ value, suffix }: { value: string; suffix: string }) {
-  const [count, setCount] = useState(0);
+  const numericValue = parseInt(value);
+  // Initialise with final value so SSR HTML shows the real number, not 0
+  const [count, setCount] = useState(isNaN(numericValue) ? 0 : numericValue);
+  const [hasAnimated, setHasAnimated] = useState(false);
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
-  const numericValue = parseInt(value);
 
   useEffect(() => {
-    if (isInView && !isNaN(numericValue)) {
+    if (isInView && !isNaN(numericValue) && !hasAnimated) {
+      setHasAnimated(true);
+      setCount(0);
       let start = 0;
       const duration = 2000;
       const increment = numericValue / (duration / 16);
@@ -64,7 +68,7 @@ function CountUpNumber({ value, suffix }: { value: string; suffix: string }) {
 
       return () => clearInterval(timer);
     }
-  }, [isInView, numericValue]);
+  }, [isInView, numericValue, hasAnimated]);
 
   return (
     <div ref={ref} className="text-5xl md:text-6xl lg:text-7xl font-bold text-primary-green" style={{ textShadow: '0 0 40px rgba(191, 242, 77, 0.3)' }}>

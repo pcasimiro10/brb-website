@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Terms of Service - brb",
-  description: "Terms of Service for brb - Move First, Scroll Later",
+  title: "Terms of Service – brb app",
+  description:
+    "Terms of Service for the brb walk-to-unlock app. Covers subscriptions, app blocking, HealthKit integration, and acceptable use.",
 };
 
 export default function TermsPage() {

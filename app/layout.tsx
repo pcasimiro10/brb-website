@@ -9,10 +9,10 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "brb: Walk to Unlock Apps | Move First, Scroll Later",
+  title: "brb: Walk to Unlock Apps | Block Apps Until You Hit Your Step Goal",
   description: "brb blocks your distracting apps until you hit your daily step goal. Turn your biggest distraction into your biggest motivation. Available on iOS.",
   openGraph: {
-    title: "brb: Walk to Unlock Apps | Move First, Scroll Later",
+    title: "brb: Walk to Unlock Apps | Block Apps Until You Hit Your Step Goal",
     description: "brb blocks your distracting apps until you hit your daily step goal. Turn your biggest distraction into your biggest motivation. Available on iOS.",
     type: "website",
     url: "https://berightbackapp.com",
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "brb: Walk to Unlock Apps | Move First, Scroll Later",
+    title: "brb: Walk to Unlock Apps | Block Apps Until You Hit Your Step Goal",
     description: "brb blocks your distracting apps until you hit your daily step goal. Turn your biggest distraction into your biggest motivation. Available on iOS.",
     images: ["https://berightbackapp.com/og-image.png"],
     creator: "@pat_caz",

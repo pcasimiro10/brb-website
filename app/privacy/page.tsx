@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy - brb",
-  description: "Privacy Policy for brb - Move First, Scroll Later",
+  title: "Privacy Policy – brb app",
+  description:
+    "brb stores all data on-device. No servers, no tracking, no third-party sharing. Read how brb handles your health and step data.",
 };
 
 export default function PrivacyPage() {
