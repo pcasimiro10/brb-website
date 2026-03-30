@@ -29,7 +29,7 @@ export default function Hero() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-lg md:text-xl lg:text-2xl text-text-light max-w-2xl mx-auto lg:mx-0"
             >
-              Block your most distracting apps until you hit your daily step goal.
+              Block distracting apps until you hit your daily step goal.
             </motion.p>
 
             {/* Subtitle line 2 */}
@@ -37,7 +37,7 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.25 }}
-              className="text-lg md:text-xl lg:text-2xl text-primary-green max-w-2xl mx-auto lg:mx-0 mb-8 mt-2"
+              className="text-base md:text-lg text-primary-green opacity-80 max-w-2xl mx-auto lg:mx-0 mb-6 mt-2"
             >
               Your apps will Be Right Back. After you move.
             </motion.p>
@@ -47,12 +47,12 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.3 }}
-              className="space-y-3 mb-8 max-w-xl mx-auto lg:mx-0"
+              className="space-y-3 mb-6 max-w-xl mx-auto lg:mx-0"
             >
               {[
                 'No steps = no screen time. One simple rule.',
                 'Strict Mode: no ignore button, no way out.',
-                'Works with Apple Watch, Oura, Whoop, Garmin — or just your iPhone.',
+                'Works with any wearable — or just your iPhone.',
               ].map((item, i) => (
                 <motion.div
                   key={i}
@@ -84,23 +84,26 @@ export default function Hero() {
                 className="text-sm text-text-muted flex items-center gap-2 justify-center lg:justify-start"
               >
                 <span className="text-yellow-400 tracking-tight">★★★★★</span>
-                <span>5.0 App Store rating · Join the movement</span>
+                <span>5.0 rating · Join the movement</span>
               </motion.p>
 
-              <a
-                href="https://apps.apple.com/app/brb-walk-to-unlock-apps/id6757323160"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center bg-primary-green text-dark-bg font-bold text-lg px-8 py-4 rounded-full hover:bg-primary-green/90 transition-all duration-300 hover:scale-105 shadow-lg shadow-primary-green/20"
-              >
-                Download Free (iPhone)
-              </a>
-              <Link
-                href="/contact?waitlist=android"
-                className="text-sm text-text-muted hover:text-text-light transition-colors underline underline-offset-2"
-              >
-                Android? Join the waitlist →
-              </Link>
+              {/* Button + Android link grouped and centered together */}
+              <div className="flex flex-col items-center gap-2">
+                <a
+                  href="https://apps.apple.com/app/brb-walk-to-unlock-apps/id6757323160"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center bg-primary-green text-dark-bg font-bold text-lg px-8 py-4 rounded-full hover:bg-primary-green/90 transition-all duration-300 hover:scale-105 shadow-lg shadow-primary-green/20"
+                >
+                  Download Free (iPhone)
+                </a>
+                <Link
+                  href="/contact?waitlist=android"
+                  className="text-sm text-text-muted hover:text-text-light transition-colors underline underline-offset-2"
+                >
+                  Android? Join the waitlist →
+                </Link>
+              </div>
             </motion.div>
           </div>
 
