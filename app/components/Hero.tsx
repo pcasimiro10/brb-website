@@ -29,7 +29,7 @@ export default function Hero() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-lg md:text-xl text-text-light max-w-2xl mx-auto lg:mx-0"
             >
-              Block distracting apps until you hit your daily step goal.
+              brb blocks distracting apps until you hit your daily step goal.
             </motion.p>
 
             {/* Subtitle line 2 */}
